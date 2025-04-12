@@ -3,20 +3,23 @@ Repository with the files in the Bachelor's Thesis (Trabajo Fin de Grado) of Mar
 
 ## File description:
 
-- `Simulations/ParametrosCineticos.xlsx`
-    This Excel file contains the kinetic parameters used in the simulations, including trap activation energy and frequency factor for each trap and recombination center.
+- `TFG_MARTA.ipynb`:  
+    This Jupyter Notebook is the latest version in current development.
 
-- `Simulations/ParametrosEstructurales.xlsx`
-    This Excel file contains the structural parameters used in the simulations, including the total density of available states and trapping probabilities for each trap and recombination center.
+- `TFG_MARTA_GCOLAB.ipynb`:  
+    This Jupyter Notebook is the latest version in the Google Colab.
 
-- `LiF_Entropy.ipynb`
+- `other_plots.ipynb`:  
+    This Jupyter Notebook has some useful plots or calculations for the main code file.
+
+- `LiF_Entropy.ipynb`:  
     This Jupyter Notebook contains an initial study on the expression of the entropy in the Fermi-Dirac statistic for the case of a semiconductor.
 
-- `LiF_Entropy_Conductor.ipynb`
+- `LiF_Entropy_Conductor.ipynb`:  
     This Jupyter Notebook contains an initial study on the expression of the entropy in the Fermi-Dirac statistic for the case of a conductor.
 
-- `TFG_MARTA_GCOLAB.ipynb`
-    This Jupyter Notebook is the latest version in the Google Colab
+- `Simulations/ParametrosCineticos.xlsx`:  
+    This Excel file contains the kinetic parameters used in the simulations, including trap activation energy and frequency factor for each trap and recombination center.
 
-- `TFG_MARTA.ipynb`
-    This Jupyter Notebook is the latest version in current development.
+- `Simulations/ParametrosEstructurales.xlsx`:  
+    This Excel file contains the structural parameters used in the simulations, including the total density of available states and trapping probabilities for each trap and recombination center.
