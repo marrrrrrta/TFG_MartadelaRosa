@@ -1,3 +1,5 @@
+import numpy as np
+
 def freq_factor(deltaS):
     """
     Computes the frequency factor that follows the expression:
