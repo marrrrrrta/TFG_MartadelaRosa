@@ -3,6 +3,12 @@ Repository with the files in the Bachelor's Thesis (Trabajo Fin de Grado) of Mar
 
 ## File description:
 
+- `simulations.ipynb`:   
+    An experiment with building the necessary functions in a separate folder to optimize the use of more than one model for the frequency factor. Calls the functions in the `Functions` folder, and outputs a `.csv` with the results in the `Results` folder.
+
+- `Functions/diff_eqs_[].ipynb`:   
+    Script with the function to name the differential equations system. The text in brackets `[]` refer to the way the frequency factor depends with temperature.
+
 - `TFG_MARTA.ipynb`:  
     This Jupyter Notebook is the latest version in current development.
 
