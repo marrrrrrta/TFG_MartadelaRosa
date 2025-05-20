@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.23)  27 APR 2025 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.23)  6 MAY 2025 20:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -697,14 +697,14 @@ Package hyperref Info: Link coloring ON on input line 60.
 \openout4 = `plantilla_TFG_CienciasUCO_2022_utf8.out'.
 
  (./portada.tex
-<logo_ciencias.png, id=74, 157.5486pt x 157.5486pt>
+<logo_ciencias.png, id=94, 157.5486pt x 157.5486pt>
 File: logo_ciencias.png Graphic file (type png)
 <use logo_ciencias.png>
 Package pdftex.def Info: logo_ciencias.png  used on input line 23.
 (pdftex.def)             Requested size: 170.71652pt x 170.71729pt.
 
 
-<fondo_portada.png, id=76, 578.16pt x 831.105pt>
+<fondo_portada.png, id=96, 578.16pt x 831.105pt>
 File: fondo_portada.png Graphic file (type png)
 <use fondo_portada.png>
 Package pdftex.def Info: fondo_portada.png  used on input line 27.
@@ -815,12 +815,12 @@ Cap\'{\i }tulo 3.
 
 
 ]
-<Images/FD_irradiation.png, id=165, 1437.4503pt x 281.853pt>
+<Images/FD_irradiation.png, id=191, 1437.4503pt x 281.853pt>
 File: Images/FD_irradiation.png Graphic file (type png)
 <use Images/FD_irradiation.png>
 Package pdftex.def Info: Images/FD_irradiation.png  used on input line 28.
 (pdftex.def)             Requested size: 409.71692pt x 80.33324pt.
-<Images/modeldiagram.pdf, id=167, 486.47546pt x 201.28801pt>
+<Images/modeldiagram.pdf, id=193, 486.47546pt x 201.28801pt>
 File: Images/modeldiagram.pdf Graphic file (type pdf)
 <use Images/modeldiagram.pdf>
 Package pdftex.def Info: Images/modeldiagram.pdf  used on input line 39.
@@ -831,40 +831,44 @@ Package pdftex.def Info: Images/modeldiagram.pdf  used on input line 39.
 
 [11]
 
-[12])
+[12]
 
-[13]
+[13])
+
+[14]
 \openout2 = `capitulo4.aux'.
 
  (./capitulo4.tex
 Cap\'{\i }tulo 4.
 )
 
-[14
+[15
 
 
 
 
 ]
+
+[16]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 
-[15
+[17
 
 
 
 
 ])
 
-[16
+[18
 
 ]
 \openout2 = `bibliografia.aux'.
 
  (./bibliografia.tex)
 
-[17
+[19
 
 
 
@@ -874,7 +878,7 @@ Cap\'{\i }tulo 4.
 
  (./anexo1.tex)
 
-[18
+[20
 
 
 
@@ -884,7 +888,7 @@ Cap\'{\i }tulo 4.
 
  (./anexo2.tex)
 
-[19
+[21
 
 
 
@@ -898,21 +902,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `plantilla_TFG_CienciasUCO_2022_utf8.out' has not changed.
-(rerunfilecheck)             Checksum: D25C66C17A5E1C452430416FC1742A52;2473.
+(rerunfilecheck)             Checksum: 9F946D86CA0D53F29A810AA695E3F2AF;3467.
  ) 
 Here is how much of TeX's memory you used:
- 27259 strings out of 473190
- 484036 string characters out of 5715800
+ 27297 strings out of 473190
+ 484557 string characters out of 5715800
  992519 words of memory out of 5000000
- 49901 multiletter control sequences out of 15000+600000
- 576627 words of font info for 76 fonts, out of 8000000 for 9000
+ 49928 multiletter control sequences out of 15000+600000
+ 578305 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,12n,110p,1382b,1753s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb>
-Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (20 pages, 740609 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb>
+Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (22 pages, 792929 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
- 358 compressed objects within 4 object streams
- 102 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 501 PDF objects out of 1000 (max. 8388607)
+ 404 compressed objects within 5 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

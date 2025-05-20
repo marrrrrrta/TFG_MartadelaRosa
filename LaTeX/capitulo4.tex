@@ -1,5 +1,31 @@
-\chapter{Simulations}
+\chapter{Simulations} \label{ch:4}
+
+\section{Materials used for simulations} \label{sec:materials}
+
+The materials used for this work are all the digital tools required for the simulation of the behaviour of our material of choice. In our case, the project was made using \textit{Python} in a Jupyter Notebook. The programs written are available on the GitHub repository called \texttt{TFG\_MartadelaRosa}. 
+
+\vspace{10pt}
+
+The libraries used for the simulations are:
+\begin{itemize}
+    \item \texttt{numpy}: This library is used for numerical calculations and array manipulations.
+    \item \texttt{matplotlib}: This library is used for plotting graphs and visualizing data.
+    \item \texttt{pandas}: This library is used for data manipulation and analysis, providing data structures like DataFrames.
+    \item \texttt{scipy}: This library is used for scientific computing and includes functions for optimization, integration, interpolation, and more. In particular to solve the differential equations that describe the kinetics of the TL process.
+\end{itemize}
 
 
 
+\section{Simulations} \label{sec:simulations}
 
+
+\subsection{Understanding the Frequency Factor} \label{sec:freq_factor}
+
+As seen in section \ref{sec:factorfrecuencia}, the frequency factor is a crucial component in the kinetic equations that describe the TL process. As a general practice, this value is assumed to be constant with the temperature, and it is in great part conditioned by the nature of the material. 
+
+From equation \ref{eq:freqfactor}
+
+
+\subsection{Simulating the TL glow curve} \label{sec:simulacioncurva}
+
+The glow curve is the graphical representation of the TL process, showing the intensity of light emitted by a material as a function of temperature or time. The shape of the glow curve can provide valuable information about the trapping and recombination processes occurring in the material. To obtain the glow curve, we can use the kinetic equations \ref{eq:dn_cdt} -- \ref{eq:dn_vdt} to simulate the process. But first, we need to define what 

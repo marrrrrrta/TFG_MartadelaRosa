@@ -23,7 +23,7 @@ def diff_eqs_growth(y0, t, value):
     * jA_mn: recombination probability factor for recombination center j [cm3 s-1]
     
     ### In this case, the frequency factor is defined with:
-                 s = s_exp * (1 + growth * (T))
+                 s = s_exp * (1 + value.growth * (T))
     Args:
         y0 (_type_): initial condictions vector
         t (_type_): time vector
@@ -39,12 +39,12 @@ def diff_eqs_growth(y0, t, value):
     growth = 1E-6
     
     # Computation of electron release probabilities
-    p_I = value.S_I * (1 + growth * (value.T_C + value.hr * t)) * np.exp(-value.E_I / (value.kB * temp_heating))
-    p_II = value.S_II * (1 + growth * (value.T_C + value.hr * t)) * np.exp(-value.E_II / (value.kB * temp_heating))
-    p_III = value.S_III * (1 + growth * (value.T_C + value.hr * t)) * np.exp(-value.E_III / (value.kB * temp_heating))
-    p_IV = value.S_IV * (1 + growth * (value.T_C + value.hr * t)) * np.exp(-value.E_IV / (value.kB * temp_heating))
-    p_V = value.S_V * (1 + growth * (value.T_C + value.hr * t)) * np.exp(-value.E_V / (value.kB * temp_heating))
-    p_s = value.S_s * (1 + growth * (value.T_C + value.hr * t)) * np.exp(-value.E_s / (value.kB * temp_heating))
+    p_I = value.S_I * (1 + value.growth * (value.T_C + value.hr * t)) * np.exp(-value.E_I / (value.kB * temp_heating))
+    p_II = value.S_II * (1 + value.growth * (value.T_C + value.hr * t)) * np.exp(-value.E_II / (value.kB * temp_heating))
+    p_III = value.S_III * (1 + value.growth * (value.T_C + value.hr * t)) * np.exp(-value.E_III / (value.kB * temp_heating))
+    p_IV = value.S_IV * (1 + value.growth * (value.T_C + value.hr * t)) * np.exp(-value.E_IV / (value.kB * temp_heating))
+    p_V = value.S_V * (1 + value.growth * (value.T_C + value.hr * t)) * np.exp(-value.E_V / (value.kB * temp_heating))
+    p_s = value.S_s * (1 + value.growth * (value.T_C + value.hr * t)) * np.exp(-value.E_s / (value.kB * temp_heating))
     
     p_R_h = value.S_R_h * np.exp(-value.E_R_h / (value.kB * temp_heating))
     p_NR_h = value.S_NR_h * np.exp(-value.E_NR_h / (value.kB * temp_heating))
