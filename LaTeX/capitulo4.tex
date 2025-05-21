@@ -28,4 +28,13 @@ From equation \ref{eq:freqfactor}
 
 \subsection{Simulating the TL glow curve} \label{sec:simulacioncurva}
 
-The glow curve is the graphical representation of the TL process, showing the intensity of light emitted by a material as a function of temperature or time. The shape of the glow curve can provide valuable information about the trapping and recombination processes occurring in the material. To obtain the glow curve, we can use the kinetic equations \ref{eq:dn_cdt} -- \ref{eq:dn_vdt} to simulate the process. But first, we need to define what 
+The glow curve is the graphical representation of the TL process, showing the intensity of light emitted by a material as a function of temperature or time. The shape of the glow curve can provide valuable information about the trapping and recombination processes occurring in the material. To obtain the glow curve, we can use the kinetic equations \ref{eq:dn_cdt} -- \ref{eq:dn_vdt} to simulate the process. But first, we need to define the process our material will undergo. In our case, we will use three phases:
+
+\begin{enumerate}
+    \item \textbf{Irradiation}: The thermoluminescent material is exposed to ionizing radiation, which deposits energy into the crystal lattice and generates electron-hole pairs. Some of these charge carriers become trapped in the metastable energy levels (traps) associated with the crystal defects introduced by Mg and Ti in LiF:Mg,Ti. The spatial distribution and depth of these traps determine the subsequent thermoluminescent response.
+
+    \item \textbf{Relaxation}: Following irradiation, the material is left undisturbed at room temperature for a defined period. During this phase, unstable or shallowly trapped charge carriers can thermally escape and recombine, often without contributing to the detectable thermoluminescence signal. This step helps eliminate spurious low-temperature peaks and enhances the stability and reproducibility of the glow curve by ensuring that only charge carriers trapped in thermally stable traps remain.
+
+    \item \textbf{Heating}: The sample is then heated from an initial temperature to a final temperature at a constant linear heating rate. As the temperature increases, the trapped electrons gain enough thermal energy to escape from their traps. Upon escaping, these electrons migrate through the conduction band and eventually recombine with holes at luminescence centers, emitting photons. The intensity of this emitted light as a function of temperature constitutes the glow curve, which provides valuable information about the trap parameters and the radiation dose absorbed by the material.
+\end{enumerate}
+
