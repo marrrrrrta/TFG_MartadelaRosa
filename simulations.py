@@ -22,16 +22,17 @@ from Functions.plotting import plot_results
 
 # Change this to the function you want to use
 FunctionUsed = diff_eqs_freqfactor
-GraphTitle = ' with frequency factor dependent on temperature'
+GraphTitle = ' with frequency factor DEPENDENT on temperature'
 
 # Coment this line if you want to keep the results from last run
+'''
 results_folder = 'Results'
 for file_path in glob.glob(os.path.join(results_folder, '*.png')):
     try:
         os.remove(file_path)
     except Exception as e:
         print(f"Could not delete {file_path}: {e}")
-
+'''
 #-------------------------------------------------------------------------
 #-------------------------------------------------------------------------
 

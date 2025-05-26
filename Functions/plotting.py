@@ -42,8 +42,8 @@ def plot_results(odeint_solution, save_path, title, x_axis, value):
     plt.tight_layout()
     
     # Saving the results
-    #plt.savefig(save_path + title + '.png', dpi=300, bbox_inches='tight')
-    plt.show()
+    plt.savefig(save_path + title + '.png', dpi=300, bbox_inches='tight')
+    #plt.show()
     
 def plot_glowcurve(odeint_solution, save_path, title, x_axis, value):
     # Unpack the variables
@@ -85,5 +85,5 @@ def plot_glowcurve(odeint_solution, save_path, title, x_axis, value):
     plt.tight_layout()
     
     # Saving the results
-    #plt.savefig(save_path + title + '.png', dpi=300, bbox_inches='tight')
+    plt.savefig(save_path + title + '.png', dpi=300, bbox_inches='tight')
     plt.show()
