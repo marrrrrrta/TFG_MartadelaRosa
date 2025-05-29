@@ -12,12 +12,11 @@
 \contentsline {section}{\numberline {3.1}The mathematical model}{9}{section.3.1}%
 \contentsline {section}{\numberline {3.2}The frequency factor}{12}{section.3.2}%
 \contentsline {section}{\numberline {3.3}About LiF:Mg,Ti}{13}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Analysis of the TL glow curve}{13}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Simulations}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Materials used for simulations}{15}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Simulations}{15}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Understanding the Frequency Factor}{15}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Simulating the TL glow curve}{16}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {4}Simulations}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Materials used for simulations}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Simulations}{14}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Understanding the Frequency Factor}{14}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Simulating the TL glow curve}{15}{subsection.4.2.2}%
 \contentsline {chapter}{Conclusiones}{17}{chapter*.9}%
 \contentsline {chapter}{Conclusions}{18}{chapter*.10}%
 \contentsline {chapter}{Bibliografía}{19}{chapter*.10}%

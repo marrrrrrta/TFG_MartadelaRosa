@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.23)  21 MAY 2025 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.23)  29 MAY 2025 16:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -380,7 +380,18 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box65
 \enit@count@id=\count319
 \enitdp@description=\count320
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+ Excluding comment 'comment') (/usr/local/texlive/2025/texmf-dist/tex/latex/units/units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip55
+\L@UnitsRaiseTextstyle=\skip56
+\L@UnitsRaiseScriptstyle=\skip57
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -391,12 +402,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip55
-\subfigcapskip=\skip56
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
 \subfigcaptopadj=\dimen269
-\subfigbottomskip=\skip57
+\subfigbottomskip=\skip60
 \subfigcapmargin=\dimen270
-\subfiglabelskip=\skip58
+\subfiglabelskip=\skip61
 \c@subfigure=\count321
 \c@lofdepth=\count322
 \c@subtable=\count323
@@ -406,8 +417,8 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 * Local config file subfigure.cfg used *
 ****************************************
 (/usr/local/texlive/2025/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip59
-\subfig@bottom=\skip60
+\subfig@top=\skip62
+\subfig@bottom=\skip63
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count325
@@ -423,8 +434,8 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box68
-\beforetitleunit=\skip61
-\aftertitleunit=\skip62
+\beforetitleunit=\skip64
+\aftertitleunit=\skip65
 \ttl@plus=\dimen271
 \ttl@minus=\dimen272
 \ttl@toksa=\toks43
@@ -433,10 +444,10 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidthfirst=\dimen275
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
-\LTleft=\skip63
-\LTright=\skip64
-\LTpre=\skip65
-\LTpost=\skip66
+\LTleft=\skip66
+\LTright=\skip67
+\LTpre=\skip68
+\LTpost=\skip69
 \LTchunksize=\count329
 \LTcapwidth=\dimen276
 \LT@head=\box69
@@ -451,20 +462,20 @@ Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 \LT@p@ftn=\toks44
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip67
-\f@nch@offset@elh=\skip68
-\f@nch@offset@erh=\skip69
-\f@nch@offset@olh=\skip70
-\f@nch@offset@orh=\skip71
-\f@nch@offset@elf=\skip72
-\f@nch@offset@erf=\skip73
-\f@nch@offset@olf=\skip74
-\f@nch@offset@orf=\skip75
-\f@nch@height=\skip76
-\f@nch@footalignment=\skip77
-\f@nch@widthL=\skip78
-\f@nch@widthC=\skip79
-\f@nch@widthR=\skip80
+\f@nch@headwidth=\skip70
+\f@nch@offset@elh=\skip71
+\f@nch@offset@erh=\skip72
+\f@nch@offset@olh=\skip73
+\f@nch@offset@orh=\skip74
+\f@nch@offset@elf=\skip75
+\f@nch@offset@erf=\skip76
+\f@nch@offset@olf=\skip77
+\f@nch@offset@orf=\skip78
+\f@nch@height=\skip79
+\f@nch@footalignment=\skip80
+\f@nch@widthL=\skip81
+\f@nch@widthC=\skip82
+\f@nch@widthR=\skip83
 \@temptokenb=\toks45
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
@@ -598,9 +609,9 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip81
+\Hy@SectionHShift=\skip84
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 196.
+Package hyperref Info: Option `colorlinks' set `true' on input line 198.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -693,18 +704,18 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \c@lstlisting=\count360
 Package hyperref Info: Link coloring ON on input line 60.
  (./plantilla_TFG_CienciasUCO_2022_utf8.out) (./plantilla_TFG_CienciasUCO_2022_utf8.out)
-\@outlinefile=\write4
-\openout4 = `plantilla_TFG_CienciasUCO_2022_utf8.out'.
+\@outlinefile=\write5
+\openout5 = `plantilla_TFG_CienciasUCO_2022_utf8.out'.
 
  (./portada.tex
-<logo_ciencias.png, id=94, 157.5486pt x 157.5486pt>
+<logo_ciencias.png, id=90, 157.5486pt x 157.5486pt>
 File: logo_ciencias.png Graphic file (type png)
 <use logo_ciencias.png>
 Package pdftex.def Info: logo_ciencias.png  used on input line 23.
 (pdftex.def)             Requested size: 170.71652pt x 170.71729pt.
 
 
-<fondo_portada.png, id=96, 578.16pt x 831.105pt>
+<fondo_portada.png, id=92, 578.16pt x 831.105pt>
 File: fondo_portada.png Graphic file (type png)
 <use fondo_portada.png>
 Package pdftex.def Info: fondo_portada.png  used on input line 27.
@@ -735,8 +746,8 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-\tf@toc=\write5
-\openout5 = `plantilla_TFG_CienciasUCO_2022_utf8.toc'.
+\tf@toc=\write6
+\openout6 = `plantilla_TFG_CienciasUCO_2022_utf8.toc'.
 
 
 
@@ -748,8 +759,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-\tf@lof=\write6
-\openout6 = `plantilla_TFG_CienciasUCO_2022_utf8.lof'.
+\tf@lof=\write7
+\openout7 = `plantilla_TFG_CienciasUCO_2022_utf8.lof'.
 
 
 
@@ -759,8 +770,8 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-\tf@lot=\write7
-\openout7 = `plantilla_TFG_CienciasUCO_2022_utf8.lot'.
+\tf@lot=\write8
+\openout8 = `plantilla_TFG_CienciasUCO_2022_utf8.lot'.
 
 )
 
@@ -815,12 +826,12 @@ Cap\'{\i }tulo 3.
 
 
 ]
-<Images/FD_irradiation.png, id=191, 1437.4503pt x 281.853pt>
+<Images/FD_irradiation.png, id=186, 1437.4503pt x 281.853pt>
 File: Images/FD_irradiation.png Graphic file (type png)
 <use Images/FD_irradiation.png>
 Package pdftex.def Info: Images/FD_irradiation.png  used on input line 28.
 (pdftex.def)             Requested size: 409.71692pt x 80.33324pt.
-<Images/modeldiagram.pdf, id=193, 486.47546pt x 201.28801pt>
+<Images/modeldiagram.pdf, id=188, 486.47546pt x 201.28801pt>
 File: Images/modeldiagram.pdf Graphic file (type pdf)
 <use Images/modeldiagram.pdf>
 Package pdftex.def Info: Images/modeldiagram.pdf  used on input line 39.
@@ -831,23 +842,23 @@ Package pdftex.def Info: Images/modeldiagram.pdf  used on input line 39.
 
 [11]
 
-[12]
+[12] Excluding 'comment' comment.)
 
-[13])
-
-[14]
+[13]
 \openout2 = `capitulo4.aux'.
 
  (./capitulo4.tex
 Cap\'{\i }tulo 4.
 
 
-[15
+[14
 
 
 
 
-])
+]
+
+[15])
 
 [16]
 \openout2 = `conclusion.aux'.
@@ -902,21 +913,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `plantilla_TFG_CienciasUCO_2022_utf8.out' has not changed.
-(rerunfilecheck)             Checksum: 9F946D86CA0D53F29A810AA695E3F2AF;3467.
+(rerunfilecheck)             Checksum: 549C9D98557CC2843C17FF50E7FDD70D;3252.
  ) 
 Here is how much of TeX's memory you used:
- 27304 strings out of 473190
- 484683 string characters out of 5715800
- 992519 words of memory out of 5000000
- 49932 multiletter control sequences out of 15000+600000
+ 27480 strings out of 473190
+ 487966 string characters out of 5715800
+ 995126 words of memory out of 5000000
+ 50092 multiletter control sequences out of 15000+600000
  578305 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,12n,110p,1382b,1753s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb>
-Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (22 pages, 794721 bytes).
+Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (22 pages, 797997 bytes).
 PDF statistics:
  504 PDF objects out of 1000 (max. 8388607)
  407 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 115 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

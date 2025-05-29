@@ -78,7 +78,7 @@ def plot_glowcurve(odeint_solution, save_path, title, x_axis, value):
     plt.legend(loc = 'upper left')
 
     plt.subplot(1, 3, 3)
-    plt.plot(x_axis, (n_c + n_I + n_II + n_III + n_IV + n_V + n_s)/(m_R + m_NR))
+    plt.plot(x_axis, (n_c + n_I + n_II + n_III + n_IV + n_V + n_s)/(m_R + m_NR + n_v))
     plt.xlabel('Temperature (ºC)')
     plt.title('Charge neutrality')
     plt.suptitle(title)
