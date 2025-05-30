@@ -18,49 +18,8 @@ The libraries used for the simulations are:
 
 \section{Simulations} \label{sec:simulations}
 
-
-\subsection{Understanding the Frequency Factor} \label{sec:freq_factor}
-
-As seen in section \ref{sec:factorfrecuencia}, the frequency factor is a crucial component in the kinetic equations that describe the TL process. As a general practice, this value is assumed to be constant with the temperature, and it is in great part conditioned by the nature of the material. 
+To compute a simulation of the TL process described in Section \ref{sec:modelo}, after defining the parameters of the model, we need to solve the differential equations that describe the kinetics of the TL process. The equations are solved using the \texttt{odeint} function from the \texttt{scipy.integrate} library, which is a powerful tool for solving ordinary differential equations. The function takes as input the system of equations, the initial conditions, and the time points at which we want to evaluate the solution. The output is an array containing the values of the variables at each time point, which is then saved to their corresponding variables, used to plot the results. They are brought to life using the \texttt{matplotlib} library, and for every resolution of the differential equations, we will present three graphs as the result.
 
 \vspace{10pt}
 
-From equation \ref{eq:freqfactor} we see that the frequency factor has an exponential dependency with the entropy change. This, taking the Quantum Statistical Mechanics theory \cite{brey}, does not align with the invariance of said factor with temperature, as entropy, with its own definition, should vary when temperature does. While a rigorous proof of the overall temperature dependence of the frequency factor is beyond the scope of this work, several models are proposed to provide an approximate perspective on how this dependency could influence the resulting TL glow curve.
-
-\vspace{10pt}
-
-At first glance, the simplest model was considered, where the entropy would be linear with the temperature ($\Delta S \propto T$). This theory was quickly discarded as would make the entropy factor increase exponentially with the temperature ($s \propto e^T$), and so the probability of excitation would tend to infinity in a very short range of temperature increase.
-
-\vspace{10pt}
-
-To solve this issue, a more refined model was considered, where the entropy would now be logarithmically dependent on the temperature ($\Delta S \propto \ln(T)$). The constant of the proportionality can be called $\alpha$, and the resulting expression of the frequency factor can be written as:
-
-\begin{equation}\label{eq:freqfactor_lnT}
-    s = \nu_{ph} \cdot K \cdot T^{\nicefrac{\alpha}{k_B}}
-\end{equation}
-
-\vspace{10pt}
-
-It is clear now that a softer dependency with the temperature is achieved, and the previous problem of the entropy factor tending to infinity is solved. The value of $\alpha$ can be adjusted to keep the entropy contribution at a realistic magnitude ---typically we have $\Delta S \sim  1\!-\!3 ~~k_B$ over the glow curve temperature range---. For that reason, we have selected a value of:
-
-\begin{equation}
-    \alpha = \frac{1.5 ~k_B}{ln(300)} \approx 0.26 ~k_B
-\end{equation}
-
-\vspace{10pt}
-
-This choice ensures that the frequency factor remains within a reasonable range across the temperature spectrum of interest, and yields TL glow curves that are consistent with experimental observations of LiF:Mg,Ti materials.
-
-
-\subsection{Simulating the TL glow curve} \label{sec:simulacioncurva}
-
-The glow curve is the graphical representation of the TL process, showing the intensity of light emitted by a material as a function of temperature or time. The shape of the glow curve can provide valuable information about the trapping and recombination processes occurring in the material. To obtain the glow curve, we can use the kinetic equations \ref{eq:dn_cdt} -- \ref{eq:dn_vdt} to simulate the process. But first, we need to define the process our material will undergo. In our case, we will use three phases:
-
-\begin{enumerate}
-    \item \textbf{Irradiation}: The thermoluminescent material is exposed to ionizing radiation, which deposits energy into the crystal lattice and generates electron-hole pairs. Some of these charge carriers become trapped in the metastable energy levels (traps) associated with the crystal defects introduced by Mg and Ti in LiF:Mg,Ti. The spatial distribution and depth of these traps determine the subsequent thermoluminescent response.
-
-    \item \textbf{Relaxation}: Following irradiation, the material is left undisturbed at room temperature for a defined period. During this phase, unstable or shallowly trapped charge carriers can thermally escape and recombine, often without contributing to the detectable thermoluminescence signal. This step helps eliminate spurious low-temperature peaks and enhances the stability and reproducibility of the glow curve by ensuring that only charge carriers trapped in thermally stable traps remain.
-
-    \item \textbf{Heating}: The sample is heated from an initial temperature to a final temperature at a constant linear heating rate. As the temperature increases, the trapped electrons gain enough thermal energy to escape from their traps. Upon escaping, these electrons migrate through the conduction band and eventually recombine with holes at luminescence centers, emitting photons. The intensity of this emitted light as a function of temperature constitutes the glow curve, which provides valuable information about the trap parameters and the radiation dose absorbed by the material.
-\end{enumerate}
 
