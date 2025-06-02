@@ -21,18 +21,8 @@ from Functions.plotting import plot_results
 #---------------------------- EDITABLE CODE ------------------------------
 
 # Change this to the function you want to use
-FunctionUsed = diff_eqs_notemp
-GraphTitle = ' for just giggles notemp'
-
-# Coment this line if you want to keep the results from last run
-'''
-results_folder = 'Results'
-for file_path in glob.glob(os.path.join(results_folder, '*.png')):
-    try:
-        os.remove(file_path)
-    except Exception as e:
-        print(f"Could not delete {file_path}: {e}")
-'''
+FunctionUsed = diff_eqs_freqfactor
+GraphTitle = r' for a G = 10000 cm$^{-3}$ s$^{-1}$'
 #-------------------------------------------------------------------------
 #-------------------------------------------------------------------------
 
@@ -90,23 +80,78 @@ column_names = [
 value.kB = 8.617e-5        # Boltzmann constant (eV/K)
 value.T_C = 25             # Temperature (ºC)
 value.hr = 0               # Heating rate (ºC/s)
-value.G = 1000             # Electron-hole pair generation (cm-3 s-1)
+
 
 # Time vector (s)
 npoints = 3600
 t = np.linspace(0, npoints-1, npoints)
 
 # Initial conditions vector
-n_I_0, n_II_0, n_III_0, n_IV_0, n_V_0, n_s_0, m_NR_0, m_R_0, n_c_0, n_v_0 = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-y0 = [n_I_0, n_II_0, n_III_0, n_IV_0, n_V_0, n_s_0, m_NR_0, m_R_0, n_c_0, n_v_0]
+n_I_01, n_II_01, n_III_01, n_IV_01, n_V_01, n_s_01, m_NR_01, m_R_01, n_c_01, n_v_01 = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+y01 = [n_I_01, n_II_01, n_III_01, n_IV_01, n_V_01, n_s_01, m_NR_01, m_R_01, n_c_01, n_v_01]
 
 # Solving the differential equations system for TEMPERATURE DEPENDENCY
-irradiation = odeint(FunctionUsed, y0, t, args=(value,))
-n_I, n_II, n_III ,n_IV ,n_V ,n_s ,m_R ,m_NR ,n_c , n_v = irradiation.T
+value.G = 10000            # Electron-hole pair generation (cm-3 s-1)
+irradiation1 = odeint(FunctionUsed, y01, t, args=(value,))
+n_I1, n_II1, n_III1 ,n_IV1 ,n_V1 ,n_s1 ,m_R1 ,m_NR1 ,n_c1 , n_v1 = irradiation1.T
+
+value.G = 1000
+irradiation2 = odeint(FunctionUsed, y01, t, args=(value,))
+n_I2, n_II2, n_III2 ,n_IV2 ,n_V2 ,n_s2 ,m_R2 ,m_NR2 ,n_c2 , n_v2 = irradiation2.T
 
 # Plotting the results
-plot_results(irradiation, 'Results/', 'IRRADIATION' + GraphTitle, t, value)
+# Frequency factor INDEPENDENT of temperature
+plt.figure(figsize=(10, 4))
 
+plt.subplot(1, 3, 1)
+plt.plot(t, n_I1, label='n$_{I}$(t)', color='blue')
+plt.plot(t, n_I2, label='n$_{I}$(t) 2', color='orange')
+plt.plot(t, n_II1, label='n$_{II}$(t)', color='blue')
+plt.plot(t, n_II2, label='n$_{II}$(t) 2', color='orange')
+plt.plot(t, n_III1, label='n$_{III}$(t)', color='blue')
+plt.plot(t, n_III2, label='n$_{III}$(t) 2', color='orange')
+plt.plot(t, n_IV1, label='n$_{IV}$(t)', color='blue')
+plt.plot(t, n_IV2, label='n$_{IV}$(t) 2', color='orange')
+plt.plot(t, n_V1, label='n$_{V}$(t)', color='blue')
+plt.plot(t, n_V2, label='n$_{V}$(t) 2', color='orange')
+plt.plot(t, n_s1, label='n$_{s}$(t)', color='blue')
+plt.plot(t, n_s2, label='n$_{s}$(t) 2', color='orange')
+
+plt.xlabel('Time (s)')
+plt.ylabel('Trap concentration (cm$^{-3}$)')
+plt.title('n$_{i}$ evolution')
+plt.legend(loc = 'upper left')
+
+plt.subplot(1, 3, 2)
+dm_R1 = m_R1 * A_mn_R * n_c1
+dm_R2 = m_R2 * A_mn_R * n_c2
+dm_NR1 = m_NR1 * A_mn_NR * n_c1
+dm_NR2 = m_NR2 * A_mn_NR * n_c2
+plt.plot(t, dm_R1, label='dm$_{R}$(t)', color='blue')
+plt.plot(t, dm_R2, label='dm$_{R}$(t) 2', color='orange')
+plt.plot(t, dm_NR1, label='dm$_{NR}$(t)', color='blue')
+plt.plot(t, dm_NR2, label='dm$_{NR}$(t) 2', color='orange')
+
+plt.xlabel('Time (s)')
+plt.ylabel(r'$\frac{dm_{i=R,NR}}{dt}$ [u.a.]')
+plt.title('Recombination')
+plt.legend(loc = 'upper left')
+
+plt.subplot(1, 3, 3)
+plt.plot(t, (n_c1 + n_I1 + n_II1 + n_III1 + n_IV1 + n_V1 + n_s1)/(m_R1 + m_NR1), color='blue')
+plt.plot(t, (n_c2 + n_I2 + n_II2 + n_III2 + n_IV2 + n_V2 + n_s2)/(m_R2 + m_NR2), color='orange')
+plt.xlabel('Time (s)')
+plt.title('Charge neutrality')
+
+plt.suptitle('Frequency factor INDEPENDENT of temperature')
+
+plt.tight_layout()
+plt.show()
+
+
+
+
+'''
 #-------------------------------------------------------------------------
 
 ## 2.2 RELAXATION
@@ -153,3 +198,4 @@ n_I, n_II, n_III ,n_IV ,n_V ,n_s ,m_R ,m_NR ,n_c , n_v = heating.T
 # Plotting the results
 temp_plot = value.T_C + value.hr * t
 plot_results(heating, 'Results/', 'HEATING' + GraphTitle, temp_plot, value)
+'''

@@ -65,6 +65,14 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+%% captions
+\usepackage{subcaption}
+\DeclareCaptionFormat{custom}
+{%
+    \textbf{#1#2}\textit{\small #3}
+}
+\captionsetup{format=custom, width=0.9\textwidth, font={small, onehalfspacing}}
+
 %Para el fondo de la portada
 \usepackage{eso-pic}
 \newcommand\BackgroundPic{%
