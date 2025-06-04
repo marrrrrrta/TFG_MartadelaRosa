@@ -5,7 +5,7 @@ def freq_factor(deltaS):
     Computes the frequency factor that follows the expression:
                  S = nu * K * exp(DeltaS / kB)
     
-    * nu: lattive phonon vibration frequency (s-1)  
+    * nu: lattice phonon vibration frequency (s-1)  
     * K: transition probability constant
     * kB: Boltzmann constant (eV/K)
 

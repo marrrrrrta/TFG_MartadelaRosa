@@ -16,7 +16,8 @@
 % Idioma castellano 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[spanish,es-tabla]{babel}
+%\usepackage[spanish,es-tabla]{babel}
+\usepackage[english]{babel}
 %\usepackage{mathpazo} 
 %\usepackage{eulervm}
 
@@ -25,8 +26,8 @@
 \usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
 
 % Para redefinir algunas cosas del babel en castellano 
-\accentedoperators    % Pone acentos a los operadores
-\decimalpoint         % Usa el punto como separador decimal
+%\accentedoperators    % Pone acentos a los operadores
+%\decimalpoint         % Usa el punto como separador decimal
                     
 
 % Paquetes auxiliares  (incluir aquellos que se necesiten)
@@ -56,6 +57,7 @@
 \usepackage{appendix}   % Contiene mandatos adicionales para apéndices
 \usepackage{titlesec}   % Para redefinir capítulos, secciones,...
 \usepackage{longtable}  % Para tablas grandes
+\usepackage{multirow}
 
 
 % Para las cabeceras y pies (luego se redefine cuando haga falta)
@@ -149,8 +151,28 @@ keepaspectratio]{fondo_portada.png}%
      rulesep=.4pt,
      backgroundcolor=\color{gray96},
      rulesepcolor=\color{black}}
-     
-     
+
+\usepackage{xcolor}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeblue}{rgb}{0.2,0.2,0.7}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue}\bfseries,               % Python keywords
+    morekeywords={[2]odeint, linspace, np},           % custom functions
+    keywordstyle={[2]\color{orange}},                 % style for group 2
+    commentstyle=\color{gray}\itshape,
+    stringstyle=\color{green!50!black},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    frame=single,
+    tabsize=4
+}
+
  % Para código ISE
      
 \lstdefinelanguage{ISE} {morekeywords={library,use,entity,is,port,in,out,end,
@@ -215,12 +237,12 @@ basicstyle=\small \ttfamily,
 \definecolor{gray96}{gray}{.96}
 
 % Algunas redefiniciones 
-%\renewcommand{\contentsname}{Índice general}
+%\renewcommand{\contentsname}{General index}
 %\renewcommand{\partname}{Parte}
 %\renewcommand{\appendixname}{Apéndice}
 %\renewcommand{\figurename}{Figura}
 %\renewcommand{\listfigurename}{Índice de figuras}
-%\renewcommand{\chaptername}{Capítulo}
-%\renewcommand{\bibname}{Bibliografía}
+\renewcommand{\chaptername}{Chapter}
+\renewcommand{\bibname}{Bibliography}
 
 

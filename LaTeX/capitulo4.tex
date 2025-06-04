@@ -2,7 +2,7 @@
 
 \section{Materials used for simulations} \label{sec:materials}
 
-The materials used for this work are all the digital tools required for the simulation of the behaviour of our material of choice. In our case, the project was made using \textit{Python} in a Jupyter Notebook. The programs written are available on the GitHub repository called \texttt{TFG\_MartadelaRosa}. 
+The materials used for this work are all the digital tools required for the simulation of the behavior of our material of choice. In our case, the project was made using \textit{Python} in a Jupyter Notebook. The programs written are available on the GitHub repository called \texttt{TFG\_MartadelaRosa}. 
 
 \vspace{10pt}
 
@@ -18,8 +18,83 @@ The libraries used for the simulations are:
 
 \section{Simulations} \label{sec:simulations}
 
-To compute a simulation of the TL process described in Section \ref{sec:modelo}, after defining the parameters of the model, we need to solve the differential equations that describe the kinetics of the TL process. The equations are solved using the \texttt{odeint} function from the \texttt{scipy.integrate} library, which is a powerful tool for solving ordinary differential equations. The function takes as input the system of equations, the initial conditions, and the time points at which we want to evaluate the solution. The output is an array containing the values of the variables at each time point, which is then saved to their corresponding variables, used to plot the results. They are brought to life using the \texttt{matplotlib} library, and for every resolution of the differential equations, we will present three graphs as the result.
+To compute a simulation of the TL process described in Section \ref{sec:modelo}, after defining the parameters of the model, we need to solve the differential equations that describe the kinetics of the TL process. The equations are solved using the \texttt{odeint} function from the \texttt{scipy.integrate} library. The function takes as input the system of equations, the initial conditions, and the time points at which we want to evaluate the solution. The output is an array containing the values of the variables at each time point, which is then saved to their corresponding variables, used to plot the results. They are brought to life using the \texttt{matplotlib} library, and for every resolution of the differential equations, we will present three graphs as the result.
 
 \vspace{10pt}
 
+The first step to perform the simulations is to define the parameters of the model. These parameters include the activation energy ($E_i$), the frequency factor ($s_i$), the electron trapping probability factor ($A_i$), and total density of electrons ($N_i$) for each trapping center, as well as the recombination centers. The parameters used in our case can be found in Table \ref{tab:simulationparameters}. The values of these parameters are based on experimental data \cite{benavente_LiF} for the specific material being studied, in this case, LiF:Mg,Ti, and are proposed within the margin of error. Once the model parameters have been defined, the simulation proceeds by numerically solving the system of differential equations described in equations \ref{eq:dn_cdt}--\ref{eq:dn_vdt}. As we mentioned, this is done by using \texttt{odeint} function from the \texttt{scipy.integrate} library. For each phase, the appropriate parameters and initial conditions are set to a general simulation function that returns the evolution of all charge concentrations. 
 
+
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}[c]{llcccc}
+\caption{Kinetic and structural parameters used in the simulations. Each trap and recombination center is characterized by its activation energy ($E_i$), frequency factor ($s_i$), electron trapping probability factor ($A_i$), and total density of electrons ($N_i$). The values are based on experimental data for LiF:Mg,Ti.}
+\label{tab:simulationparameters}\\
+\hline
+\multicolumn{2}{l}{Parameters} & \multicolumn{1}{c}{E (eV)} & \multicolumn{1}{c}{s (s$^{-1}$)} & \multicolumn{1}{c}{A (cm$^3$ s$^{-1}$)} & \multicolumn{1}{c}{N (cm$^3$)} \\ \hline
+\endhead
+%
+\hline
+\endfoot
+%
+\endlastfoot
+%
+\multirow{6}{*}{Trapping Centers}      & Trap I        & 1.19   & 1.00 $\cdot 10^{15}$ &  $10^{-8}$ &  $10^{10}$ \\
+                                       & Trap II       & 1.60   & 1.41 $\cdot 10^{14}$ &  $10^{-8}$ &  $10^{10}$ \\
+                                       & Trap III      & 1.76   & 9.05 $\cdot 10^{15}$ &  $10^{-8}$ &  $10^{10}$ \\
+                                       & Trap IV       & 1.87   & 5.78 $\cdot 10^{15}$ &  $10^{-8}$ &  $10^{10}$ \\
+                                       & Trap V        & 1.98   & 8.71 $\cdot 10^{17}$ &  $10^{-8}$ &  $10^{10}$ \\
+                                       & Trap s        & 2.70   & 1.00 $\cdot 10^{15}$ &  $10^{-8}$ &  $10^{10}$ \\ \hline
+\multirow{2}{*}{Recombination centers} & Radiative     & 2.30   & 1.00 $\cdot 10^{16}$ &  $10^{-8}$ &  $10^{10}$ \\
+                                       & Non Radiative & 2.30   & 1.00 $\cdot 10^{16}$ &  $10^{-8}$ &  $10^{10}$ \\ \hline
+\end{longtable}
+
+To ensure modularity and consistency, the simulation is structured in reusable components. Each phase is simulated by calling the same solver function with different input values, and the output is automatically stored and passed between stages to maintain continuity. As two models have been used for the simulations, two separate functions were created to define the system of differential equations for the TL process. The first function, \texttt{diff\_eqs\_freqfactor()}, is used for the simulations of the TL process with a frequency factor that depends on the temperature following equation \ref{eq:freqfactor_lnT}, while the second function, \texttt{diff\_eqs\_notemp()}, is used for the simulations where the frequency factor is a constant from Table \ref{tab:simulationparameters}. The functions take as input the current state of the system, the time, and the parameters of the model, and return the derivatives of the charge concentrations with respect to time. In the Listing \ref{lst:irradiation}, we can see the implementation of the first function for the irradiation phase of the TL process.
+
+\vspace{10pt}
+
+\renewcommand{\baselinestretch}{1}
+\begin{lstlisting}[language=Python, caption={Python simulation of the irradiation phase in TL simulations. It defines the initial parameters, initializes trap and recombination center populations, solves the system of differential equations, and plots the results.}, label=lst:irradiation]
+
+## 2.1 IRRADIATION
+# Parameters for IRRADIATION
+value.kB = 8.617e-5        # Boltzmann constant (eV/K)
+value.T_C = 25             # Temperature (celsius)
+value.hr = 0               # Heating rate (celsius/s)
+value.G = 1000             # e-hole pair gen (cm-3 s-1)
+
+# Time vector (s)
+npoints = 3600
+t = np.linspace(0, npoints-1, npoints)
+
+# Initial conditions vector
+n_I, n_II, n_III, n_IV, n_V, n_s = 0, 0, 0, 0, 0, 0
+m_NR, m_R = 0, 0
+n_c, n_v = 0, 0
+y0 = [n_I, n_II, n_III, n_IV, n_V, n_s, m_NR, m_R, n_c, n_v]
+
+# Solving the differential equations system
+irradiation = odeint(diff_eqs_freqfactor, y0, t, args=(value,))
+n_I, n_II, n_III ,n_IV ,n_V ,n_s ,m_R ,m_NR ,n_c , n_v 
+    = irradiation.T
+
+# Plotting the results
+plot_results(irradiation, save_path, t, value)
+
+
+\end{lstlisting}
+\renewcommand{\baselinestretch}{1.5}
+
+\vspace{10pt}
+
+After solving the system of differential equations for a given phase, the simulation outputs three diagnostic plots that represent the state and evolution of the material over time (or temperature in the case of the \textit{heating} phase). These are:
+
+\begin{itemize}
+    \item \textbf{Electron concentration $\mathbf{n_i(t)}$ evolution:} This plot shows the temporal evolution in each trap. It provides insight into how the electron population in each trap changes over time, indicating the trapping and de-trapping processes. It shows how they are progressively filled with electrons during the irradiation phase, their stationary behavior in the relaxation phase, and their depletion during the heating phase. Their evolution depends on the parameters of each trap, and will have different shapes as a consequence.
+    \item \textbf{Recombination rates:} The graph displays the rate of radiative ($dm_R$) and non-radiative ($dm_{NR}$) recombination processes as a function of time. It shows how the recombination rates change as the traps are filled and emptied. During irradiation, $dm_R$ grows steadily as the traps fill up, to then drop rapidly to near zero during the relaxation phase, indicating that radiative recombination ceases once the irradiation stops and the system stabilizes in a metastable state. During heating, $dm_R$ rises again as the trapped electrons are thermally released and recombine radiatively with holes, producing the TL glow peaks. It is in this graph for the heating phase when we expect to obtain out TL glow curve. Throughout all three phases, the non-radiative recombination rate ($dm_{NR}$) remains constant, confirming that non-radiative recombination plays an insignificant role in simulations.
+    \item \textbf{Charge neutrality:} This plot shows the ratio of the total electron concentration to the total hole concentration as a function of time. It follows the expression:
+    \begin{equation}
+        \frac{n_c + n_I + n_{II} + n_{III} + n_{IV} + n_V + n_s}{m_R + m_{N\!R} + n_v} \approx 1
+        \label{eq:charge_neutrality}
+    \end{equation}
+    And as such, it should be close to 1 throughout the simulation. This plot is useful to verify that the system remains charge neutral during the entire process, and can serve as a validity check to ensure that the simulation is correctly implemented. If the ratio deviates significantly from 1, it may indicate an error in the model or the numerical solution.
+\end{itemize}

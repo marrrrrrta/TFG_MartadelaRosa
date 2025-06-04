@@ -1,5 +1,11 @@
 {
     "python.analysis.extraPaths": [
         "./Functions"
-    ]
+    ],
+    "cSpell.words": [
+        "deconvolution",
+        "odeint",
+        "Rhys"
+    ],
+    "cSpell.enabled": false
 }

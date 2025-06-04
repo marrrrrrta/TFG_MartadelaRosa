@@ -1,24 +1,24 @@
-\babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Índice general}{2}{chapter*.2}%
-\contentsline {chapter}{Índice de figuras}{4}{chapter*.3}%
-\contentsline {chapter}{Índice de tablas}{5}{chapter*.4}%
-\contentsline {chapter}{Resumen. Palabras clave}{6}{chapter*.5}%
-\contentsline {paragraph}{Palabras clave:}{6}{paragraph*.6}%
-\contentsline {chapter}{Abstract. Keywords}{7}{chapter*.7}%
-\contentsline {paragraph}{Keywords:}{7}{paragraph*.8}%
-\contentsline {chapter}{\numberline {1}Introduction}{8}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Objectives}{10}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Theoretical framework}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}The mathematical model}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}The frequency factor}{14}{section.3.2}%
-\contentsline {section}{\numberline {3.3}About LiF:Mg,Ti}{16}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Simulations}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Materials used for simulations}{17}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Simulations}{17}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Results}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Irradiation}{19}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Relaxation}{20}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Heating}{24}{section.5.3}%
-\contentsline {chapter}{Conclusiones}{28}{chapter*.20}%
-\contentsline {chapter}{Conclusions}{29}{chapter*.21}%
-\contentsline {chapter}{Bibliografía}{30}{chapter*.21}%
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{General index}{2}{chapter*.2}%
+\contentsline {chapter}{Index of Figures}{5}{chapter*.3}%
+\contentsline {chapter}{Index of tables}{6}{chapter*.4}%
+\contentsline {chapter}{Resumen. Palabras clave}{7}{chapter*.5}%
+\contentsline {paragraph}{Palabras clave:}{7}{paragraph*.6}%
+\contentsline {chapter}{Abstract. Keywords}{8}{chapter*.7}%
+\contentsline {paragraph}{Keywords:}{8}{paragraph*.8}%
+\contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Objectives}{11}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Theoretical framework}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The mathematical model}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Analysis of the electron release probability}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}About LiF:Mg,Ti}{20}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Simulations}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Materials used for simulations}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Simulations}{22}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Results}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Irradiation}{26}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Relaxation}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Heating}{31}{section.5.3}%
+\contentsline {chapter}{Conclusiones}{35}{chapter*.21}%
+\contentsline {chapter}{Conclusions}{37}{chapter*.22}%
+\contentsline {chapter}{Bibliography}{39}{chapter*.22}%

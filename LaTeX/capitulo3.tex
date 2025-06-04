@@ -3,11 +3,11 @@
 
 \section{The mathematical model} \label{sec:modelo}
 
-To describe the thermoluminescent response of a semicoductor, we can use a mathematical model based on the trapping and releasing of charge carriers in the accesible energy levels of the material. 
+To describe the thermoluminescent response of a semiconductor, we can use a mathematical model based on the trapping and releasing of charge carriers in the accessible energy levels of the material. 
 
 \vspace{10pt}
 
-Let us first consider the case of an arbitrary semicoductor without impurities. The energy levels of the conduction band and the valence band are separated by a bandgap $E_g$, and can be obtained with Schrodinger's equation that is under the influence of a periodic potential:
+Let us first consider the case of an arbitrary semiconductor without impurities. The energy levels of the conduction band and the valence band are separated by a bandgap $E_g$, and can be obtained with Schrodinger's equation that is under the influence of a periodic potential:
 
 \begin{equation} \label{eq:schrodinger}
   \left[ -\frac{\hbar^2}{2m} \nabla^2 + V(\vec{r}) \right] \psi(\vec{r}) = E ~ \psi(\vec{r}),
@@ -23,23 +23,24 @@ The periodicity of the potential $V(\vec{r})$ for any lattice vector $\vec{R}$ a
 \vspace{10pt}
 Where $E_f$ is the Fermi Level, and $k_B$ is the Boltzmann constant. If the system is in equilibrium, and we set the case of $T=0K$, the occupancy function $f(E)$ will be equal to 1 for all energy levels below the Fermi level, and 0 for all energy levels above it. This means that the occupancy function will be a step function, with a discontinuity at the Fermi level, and so we can see that there are no available states in the bandgap region.
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[width=0.9\textwidth]{Images/FD_irradiation.png}
-  \caption{Fermi-Dirac distribution for a semicoductor that is irradiated.}
+  \includegraphics[width=\textwidth]{Images/FD_irradiation.png}
+  \caption{Fermi-Dirac distribution $f(E)$ plotted against energy for different temperatures (0.1 K, 300 K and 600 K) at four key stages of the thermoluminescence process: (a) Before irradiation, where electrons follow a standard Fermi-Dirac distribution centered at the Fermi Level $E_F$; (b) After irradiation, the systems develops separate quasi-Fermi levels for electrons ($E_{Fe}$) and holes ($E_{Fh}$), deforming the previous distribution; (c) During stimulation, where thermal effects shift both quasi-Fermi levels closer to equilibrium, and the distribution approaches the original shape; (d) Final equilibrium, where the system returns to a standard Fermi-Dirac distribution with the Fermi Level $E_F$ restored. }
   \label{fig:FD_irradiation}
 \end{figure}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{Images/modeldiagram.pdf}
+  \caption{Jab\l oński diagram of the theoretical model for the thermoluminescence process. The energy is situated in the Y axis, and the different components of the system are shown: traps ($p_k$: electron release probability, $A_k$: recombination probability, $N_k$: total density of available positions), recombination centers ($^hp_j$: hole excitation probability, $A_j$: electron trapping probability, $^jA_{mn}$: electron recombination probability), and the conduction (B.C) and valence (B.V) bands with the respective electron-hole pair generation rate ($G$).}
+  \label{fig:TheoreticalModel}
+\end{figure}
 
 \vspace{10pt}
 The introduction of impurities or defects however, break the periodicity of the lattice, and create localized energy levels inside this ``forbidden region''. These levels can be thought of as traps for electrons if we are situated above the fermi level, and traps of holes if we are situated below. When this material is irradiated, electrons from the valence band can be excited to the conduction band, creating an electron-hole pair; and so changing the shape of the occupancy function. Once excited, both electrons and holes get ``trapped'' in these localized energy levels, and the excitation of these pairs into equilibrium will result in the emission of energy. In Figure \ref{fig:FD_irradiation} we can see a broad description of the perturbation of the system from its equilibrium state due to the irradiation, and the return of the system to equilibrium during either thermal stimulation or optical stimulation. If said relaxation processes are radiative, TL and OSL result. 
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Images/modeldiagram.pdf}
-  \caption{Schematic representation of the theoretical model.}
-  \label{fig:TheoreticalModel}
-\end{figure}
+\vspace{10pt}
 
 And so, we can see a schematic representation of our theoretical model in Figure \ref{fig:TheoreticalModel}. Situating the energy in the Y axis, the focus is set in the energy gap of our material. Drawn as a blue or green horizontal line are the energy traps; in blue above the Fermi level there are electron traps, and in green there are hole traps or recombination centers. The vertical arrows describe available transitions; the ones pointing upwards represent an excitation process, and the ones pointing downwards represent a relaxation process. 
 
@@ -67,13 +68,13 @@ Mathematically, we can describe these processes with a set of differential equat
 \vspace{15pt}
 Where every term is defined as follows:
 \begin{itemize}[itemsep=0.2cm,parsep=0cm]
-  \item $G$: electron-hole pairs generated by the radiation [cm$^{-3}$ s$^{-1}$]
+  \item $G$: electron-hole pairs generation rate by the radiation [cm$^{-3}$ s$^{-1}$]
   \item $n_c$: electron concentration in the conduction band [cm$^{-3}$]
   \item $n_v$: electron concentration in the valence band [cm$^{-3}$]
   \item $n_i$: electron concentration in trap i [cm$^{-3}$]
   \item $m_j$: hole concentration in the recombination center j [cm$^{-3}$]
-  \item $N_i$: total density of electron trapping centres in trap i [cm$^{-3}$]
-  \item $M_j$: total density of recombination centers [cm$^{-3}$]
+  \item $N_i$: total density of available positions in electron trapping centres in trap i [cm$^{-3}$]
+  \item $M_j$: total density of available positions in recombination centers [cm$^{-3}$]
   \item $p_i$: electron release probability factor for trap i [s$^{-1}$]
   \item $^hp_j$: hole release probability factor for recombination center j [s$^{-1}$]
   \item $A_i$: electron trapping probability factor for trap i [cm$^{3}$ s$^{-1}$]
@@ -82,7 +83,7 @@ Where every term is defined as follows:
 
 \vspace{10pt}
 
-Equation \ref{eq:dn_cdt} describes the change rate of electron concentrations in the conduction band. To interpret this equation, we can see that to the electron-hole pairs generated by the radiation ($G$), there are two terms substracted. The first one correlates to the electrons that leave the continuum levels of the conduction band and get trapped in the discrete levels of the material ---a process described by \ref{eq:dn_idt}, that will have a further discussion in section \ref{sec:factorfrecuencia}---, and the second one answers to the electrons in the conduction band that recombine with holes with a radiative ($R$) or non-radiative ($N\!R$) process. It is easy to see that this second term corresponds to the third term of \ref{eq:dm_jdt}. 
+Equation \ref{eq:dn_cdt} describes the change rate of electron concentrations in the conduction band. To interpret this equation, we can see that to the electron-hole pairs generated by the radiation ($G$), there are two terms subtracted. The first one correlates to the electrons that leave the continuum levels of the conduction band and get trapped in the discrete levels of the material ---a process described by \ref{eq:dn_idt}, that will have a further discussion in section \ref{sec:factorfrecuencia}---, and the second one answers to the electrons in the conduction band that recombine with holes with a radiative ($R$) or non-radiative ($N\!R$) process. It is easy to see that this second term corresponds to the third term of \ref{eq:dm_jdt}. 
 
 \vspace{10pt}
 The change rate of electron concentrations in the valence band is shown in \ref{eq:dn_vdt}, and it follows a similar logic. This time however, we only take into account the terms multiplied by the electron density in the valence band ($n_v$) seen in equation \ref{eq:dm_jdt}; one that represents the holes leaving the continuum to get trapped in the recombination centers, and another that accounts for the addition of electrons that are released from the recombination centers and recombine with the holes in the valence band. The terms described correspond to Equations \ref{eq:dn_idt} and \ref{eq:dm_jdt} describe the total change rate of electrons and holes in the discrete levels of the material. The signs of the terms in these equations follow the convention that we are set in the conduction band, and so any electron that leaves the conduction band is represented with a negative term, and any electron that enters is represented with a positive term.
@@ -99,36 +100,93 @@ The first phase is \textit{irradiation}, where the material is exposed to ionizi
 \end{equation}
 
 \vspace{7pt}
-Where the heating rate is set to $\beta = 1 $ \textdegree C s$^{-1}$. The electron-hole pairs generation rate is set to $G = 0$ cm$^{-3}$ s$^{-1}$, and the charge concentration values are taken from the final values of the relaxation phase. The heating process is set to last 400 seconds. The results after the numerical resolution of the set of equations will be the charge concentration values for every instant of time throughout the whole heating cycle [$n_c(t), n_v(t), n_i(t), m_j(t)$]. It is in this phase when the luminescent emission occurs, and so the intensity of the emmited light can be estimated in relation to the radiative recombination of electron-hole pairs. We can give the expression for the intensity of the emitted light as it follows:
+Where the heating rate is set to $\beta = 1 $ \textdegree C s$^{-1}$. The electron-hole pairs generation rate is set to $G = 0$ cm$^{-3}$ s$^{-1}$, and the charge concentration values are taken from the final values of the relaxation phase. The heating process is set to last 400 seconds. The results after the numerical resolution of the set of equations will be the charge concentration values for every instant of time throughout the whole heating cycle [$n_c(t), n_v(t), n_i(t), m_j(t)$]. It is in this phase when the luminescent emission occurs, and so the intensity of the emitted light can be estimated in relation to the radiative recombination of electron-hole pairs. We can give the expression for the intensity of the emitted light as it follows:
 
 \begin{equation} \label{eq:intensity}
-  I(t) = -\frac{dm}{dt} \approx {}^RA_{mn} \cdot m_R \cdot n_c
+  I_{T\!L}(t) = -\frac{dm}{dt} \approx {}^RA_{mn} \cdot m_R \cdot n_c
 \end{equation}
 
 \vspace{7pt}
-Representing this intensity as a function of time will be the objective of the simulations, as it is the key to understand the thermoluminescent response of the $LiF:M\!g,Ti$ after being irradiated.
 
-\section{The frequency factor} \label{sec:factorfrecuencia}
-
-As introduced in Section \ref{sec:modelo}, there is a greater discussion to be had about the releasing probability of electrons and holes, as it determines in great part the electron-hole pairs available to recombine. If we consider that after being irradiated, the material will release its carriers through \textit{thermal excitation}, an electron trapped in a lattice defect with energy $E_t$ and temperature $T$ will have a probability of being released that follows Arrhenius equation. The probability per second that the electron will be thermally excited into the conduction band is given by:
+We can write this dependence as a function of temperature by:
 
 \begin{equation}
-  p = s \cdot e^{-\frac{E_t}{k_B T}}
+  I_{T\!L}(t) = -\frac{dm}{dt} = -\frac{dm}{dt} \cdot \frac{dT}{dT} = -\frac{dm}{dT} \cdot \frac{dT}{dt} = -\frac{dm}{dT} \cdot \beta = I_{T\!L}(T) \cdot \beta
+\end{equation}
+
+Representing this intensity as a function of temperature will be the objective of the simulations, as it is the key to understand the thermoluminescent response of the LiF:Mg,Ti after being irradiated.
+
+\section{Analysis of the electron release probability} \label{sec:factorfrecuencia}
+
+As introduced in Section \ref{sec:modelo}, there is a greater discussion to be had about the releasing probability of electrons and holes, as it determines in great part the electron-hole pairs available to recombine. In general, two distinct mechanisms may contribute to the release of a trapped carrier: \textit{thermal} and \textit{optical (photo)excitation}. In the first one, the electron gains sufficient energy from lattice vibrations to overcome the trap depth, and in the latter the release is induced by the absorption of a photon whose energy exceeds the one binding the carrier to the trap. An electron trapped in a lattice defect with energy $E_t$ and temperature $T$ will have a probability of being released that is the result of:
+
+\begin{equation}
+  p = p_{th} + p_{ph}
+\end{equation}
+
+Where $p_{th}$ is the thermal excitation probability and $p_{ph}$ is the optical excitation probability. The thermal contribution follows Arrhenius equation. The probability per second that the electron will be thermally excited into the conduction band is given by:
+
+\begin{equation} \label{eq:p_th}
+  p_{th} = s \cdot e^{-\frac{E_t}{k_B T}}
 \end{equation}
 
 \vspace{10pt}
-Where $s$ is known as the \textit{frequency factor}. It can be interpreted as the ``attempt to escape'' frequency, as it is a measure of the number of times per second that energy is absorbed from phonons in the lattice. The exponential that follows is the probability that the energy absorbed is enough to cause a transition from the localized state to the conduction band. 
+Where $s$ is known as the \textit{frequency factor} [s$^{-1}$]. It can be interpreted as the ``attempt to escape'' frequency, as it is a measure of the number of times per second that energy is absorbed from phonons in the lattice. The exponential that follows is the probability that the energy absorbed is enough to cause a transition from the localized state to the conduction band. For the optical contribution on the other hand, the trapped electrons are released from their traps via absorption of energy from photons \cite{mckeever_course_2022}, and the probability is given by:
+
+\begin{equation}
+  p_{\text{ph}} = \sigma_P(E) \cdot \Phi
+\end{equation}
+
+Where $\sigma_P(E)$ is the photoionization cross-section [cm$^2$], which is a measure of the probability that a photon with energy $E$ will be absorbed by an electron trapped in a lattice defect, and $\Phi$ is the photon flux or intensity of the stimulating light [cm$^{-2}$ s$^{-1}$], which is the number of photons per unit area per unit time. This process is particularly relevant in optically stimulated luminescence (OSL), where the material is stimulated with light to release the trapped electrons and produce a luminescent signal. If $E_0$ is the threshold photon energy required to excite the electron from the trap, instead of considering only the thermal trap depth $E_t$ as one may expect, we should initially consider the effect of the contribution of lattice phonons such that:
+
+\begin{equation}
+  E_0 = E_t + E_{ph}
+\end{equation}
+
+Where $E_{ph}$ is given by:
+
+\begin{equation}
+  E_{ph} = S_{H\!R} \cdot h \cdot \nu_{ph}
+\end{equation}
+
+\vspace{7pt}
+
+And here $S$ is the Huang-Rhys factor, which is a dimensionless parameter that characterizes the degree of electron-phonon coupling in a luminescent material that usually ranges on the order of 1--2 \cite{mckeever_1995}. The higher the Huang-Rhys factor, the stronger the electron-phonon coupling, and so the greater the energy shift of the trap level due to lattice vibrations. The term $h \cdot \nu_{ph}$ is the energy of a phonon with frequency $\nu_{ph}$ [s$^{-1}$], where $h$ is Planck's constant [eV $\cdot$ s]. For LiF the phonon frequency is typically around 900 cm$^{-1}$ \cite{bransden_atomics}, which corresponds to a phonon energy of approximately 0.11 eV. If we take a Huang-Rhys factor of $S_{HR} = 1$, we can estimate the energy shift given a set of experimental values for the thermal energies $E_t$ of the traps. The results are shown in \ref{tab:energythresholds} and with them we see that the energy threshold $E_0$ is primarily determined by the thermal trap depth $E_t$, with the phonon energy $E_{ph}$ contributing a small correction.
+
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}[c]{lllll}
+\caption{Energies for the different traps and recombination centers in LiF:Mg,Ti. $E_t$ represents the thermal energy, $E_{ph}$ the phonon energy, and $E_0$ the total energy threshold.}
+\label{tab:energythresholds}\\
+\hline
+\multicolumn{2}{l}{Parameters}                            & $E_t$ (eV) & $E_{ph}$ (eV) & $E_0$ (eV) \\ \hline
+\endhead
+\hline
+\endfoot
+\endlastfoot
+\multirow{6}{*}{Trapping Centers}      & Trap I        & 1.19       & 0.11         & 1.30       \\
+                                       & Trap II       & 1.60       & 0.11         & 1.71       \\
+                                       & Trap III      & 1.76       & 0.11         & 1.87       \\
+                                       & Trap IV       & 1.87       & 0.11         & 1.98       \\
+                                       & Trap V        & 1.98       & 0.11         & 2.09       \\
+                                       & Trap s        & 2.70       & 0.11         & 2.81       \\ \hline
+\multirow{2}{*}{Recombination centers} & Radiative     & 2.30       & 0.11         & 2.41       \\
+                                       & Non Radiative & 2.30       & 0.11         & 2.41       \\ \hline
+\end{longtable}
 
 \vspace{10pt}
 
-The frequency factor is a very important parameter in the study of thermoluminescence, as it determines the rate at which electrons are released from traps. It is a function of the material properties, as shown in its definition:
+This observation reinforces the suitability of studying the thermoluminescence (TL) independently of optically stimulated luminescence (OSL). The fact that the thermal energy $E_t$ stays over zero confirms that thermal energy alone is sufficient to release charge carriers from traps over a physically accessible temperature range. Furthermore, in TL measurements, no external optical stimulation is applied during readout, and so the photon flux in a darkened environment is negligible. As a result, photo-induced excitation does not contribute meaningfully to the observed luminescence signal. From now on, we will close our focus on the thermoluminescence process, and so we will only consider the thermal excitation probability $p_{th}$ in our simulations.
+
+\vspace{10pt}
+
+If we aim to deepen our understanding of equation \ref{eq:p_th}, we can look a little further in the concept of the frequency factor $s$. It is a crucial parameter in the study of thermoluminescence, as it determines the rate at which electrons are released from traps. It is a function of the material properties, as shown in its definition:
 
 \begin{equation} \label{eq:freqfactor}
   s = \nu_{ph} \cdot K \cdot e^{\frac{\Delta S}{k_B}}
 \end{equation}
 
 \vspace{10pt}
-Where $\nu_{ph}$ is the lattice phonon vibration frequency and $K$ is the transition probability constant. Typically, one can expect $s \sim 10^{12} -10^{14}$ s$^{-1}$, which is consistent with the values of $\nu$ for most solids. The term $e^{\nicefrac{\Delta S}{k_B}}$ is a correction factor that accounts for the entropy change associated with the transition from the localized state to the conduction band. 
+Where $\nu_{ph}$ is the lattice phonon vibration frequency and $K$ is the transition probability constant, that takes the value 0 or 1 depending on whether the transition is allowed or forbidden. Typically, one can expect $s \sim 10^{12} -10^{14}$ s$^{-1}$, which is consistent with the values of $\nu$ for most solids. The term $e^{\nicefrac{\Delta S}{k_B}}$ is a correction factor that accounts for the entropy change associated with the transition from the localized state to the conduction band. 
 
 \vspace{10pt}
 
@@ -170,35 +228,22 @@ atoms, forming a crystal lattice structure of a face-centered cubic (FCC) type. 
 
 To enhance the properties for radiation detection, LiF is often doped with magnesium (Mg) and titanium (Ti) ions, and sold commercially as TLD-100 \cite{lif}. The doping process introduces defects in the crystal lattice, creating energy levels within the bandgap. These defects play a crucial role in trapping and releasing charge carriers, which are responsible for the thermoluminescent response of the material. This process is known as thermoluminescence (TL), where the trapped electrons are released upon heating, resulting in the emission of light. The intensity of this emitted light is proportional to the amount of radiation absorbed by the material, making it a valuable tool for dosimetry.
 
-
 \vspace{10pt}
 
-The TL response of LiF:Mg,Ti is characterized by a glow curve, which is a plot of the intensity of emitted light as a function of temperature. The glow curve typically exhibits several peaks, each corresponding to different trapping levels in the material. The position and shape of these peaks can provide valuable information about the trapping and recombination processes occurring in the material, and they are key to understanding the thermoluminescent response of LiF:Mg,Ti. 
+The TL response of LiF:Mg,Ti is characterized by a glow curve, which is a plot of the intensity of emitted light as a function of temperature. The glow curve typically exhibits several peaks, each corresponding to different trapping levels in the material. The position and shape of these peaks can provide valuable information about the trapping and recombination processes occurring in the material, and they are key to understanding the thermoluminescent response of LiF:Mg,Ti. In Figure \ref{fig:ExperimentalGlowCurve} we can see an experimental glow curve of LiF:Mg,Ti plotted with data provided by the Radiation Dosimetry Laboratory of CIEMAT, which shows a typical response with several peaks at different temperatures. 
 
-
-\begin{comment}
-\section{Analysis of the TL glow curve} \label{sec:theoryTLcurves}
-
-The TL glow curve is a plot of the intensity of light emitted by a thermoluminescent material as a function of temperature or time. The shape and characteristics of the this curve can provide valuable information about the trapping and recombination processes occurring in the material, and it is a key tool for understanding the thermoluminescent response of LiF:Mg, Ti. 
-
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{Images/Experimental_Glow_Curve.png}
+    \caption{Experimental thermoluminescence glow curve of LiF:Mg,Ti showing the emitted light intensity [u.a] plotted against temperature (\textdegree C). The most prominent is the main dosimetric peak around 200 \textdegree C, which is stable and reproducible. Lower-temperature peaks (<150 \textdegree C) correspond to shallow traps with poor thermal stability, while intermediate peaks (150–200 \textdegree C) suggest more complex trapping mechanisms. The measurement reflects the material’s characteristic response following exposure to ionizing radiation.}
+    \label{fig:ExperimentalGlowCurve}
+\end{figure}
 \vspace{10pt}
 
-The glow curve typically consists of one or more peaks, each corresponding to a specific trapping level in the material. The position of the peak on the temperature axis indicates the energy required to release the trapped electrons, while the area under the peak is proportional to the number of trapped electrons. 
-The shape of the glow curve can be influenced by various factors, including the heating rate, the dose of radiation absorbed, and the presence of impurities or defects in the material, and so it is important to choose them carefully to obtain reliable results.% ??
-
-\vspace{10pt}
-
-There are several methods for analyzing the glow curve, and they may be caregorized as follows:
+This characteristic shape of the glow curve for LiF:Mg,Ti has been extensively documented \cite{mckeever_course_2022} \cite{benavente_LiF} \cite{massillon-jl_role_nodate}, and it is a result of the specific energy levels introduced by the doping process, with the main peak typically occurring around 200 \textdegree C. Each peak arises from the thermal release of electrons from traps of different activation energies, if followed by recombination in the recombination centers. The graph shows the luminescence intensity plotted against temperature, and reveals five distinct glow peaks. Each of those peaks corresponds to the thermal release of trapped charge carriers from specific trap levels, and their height and position can be crucial to determine the trap depth and recombination probability. They can be categorized into:
 
 \begin{itemize}
-  \item \textbf{Partial-peak methods}: They focus on analyzing a limited portion of the glow curve peak, generally the ``initial rise'' edge. They are relatively simple, and generally sensitive to noise as they do not take into account the whole peak.
-  \item \textbf{Whole-peak methods}: They use the entire glow peak to estimate the trap parameters. They are more robust than partial-peak methods, but they can be more complex to implement.
-  \item \textbf{Peak-shape methods}: They use the geometry of the glow curve peak ---generally using the peak maximum and half-maximum points--- to estimate the trap paramenters. They are quick and convenient, but for the case of complex glow curves, they can be less accurate.
-  \item \textbf{Peak-position methods}: They relate the position of the glow peak maximum to the heating rate or dose applied to extract kinetic parameters. They are useful for tracking shifts due to changing experimental conditions, but again, they can be imprecise when dealing with overlapping peaks.
-  \item \textbf{Curve-fitting methods}: They fit the entire glow curve using a sum of theoretical peak models ---generally using the first-order kinetics model--- to extract the trap parameters. They are very accurate, but they can be computationally expensive and require a good initial guess for the parameters.
-  \item \textbf{Isothermal methods}: In these methods, the sample is held at a constant temperature and the TL intensity is measured as a function of time. They provide direct access to kinetic parameters without the influence of the heating rate, but require so precise thermal control that are less commonly used.
+  \item \textbf{Main dosimetric peak ($\sim$ 200 \textdegree C).} It has the most favorable characteristics for dosimetry: high intensity, good linearity with dose, and appears consistency at the same temperature, which helps to exhibit good reproducibility across different measurements and a relatively simple kinetic behavior. It is thermally stable at room temperature for long periods of time, meaning their signal do not fade significantly over days or weeks. 
+  \item \textbf{Lower-temperature peaks (< 150 \textdegree C).} They are associated with shallower traps, and are thermally less stable at ambient conditions. They tend to fade significantly at room temperature over time ---that is, undergo great signal loss due to thermal stimulation from room temperature alone---, and as a consequence, are not useful for dosimetric purposes. However, they are useful for fundamental studies of trapping and recombination processes, offering insight into the energy structure of the material and their mechanisms of carrier release. 
+  \item \textbf{Intermediate peaks (between 150 \textdegree C and 200 \textdegree C).} As expected, they suppose a middle ground. These peaks represent a transitional region in trap stability and interaction complexity. They are believed to arise from more complex or composite trapping structures, possibly involving multiple trapping levels or interactions between traps and recombination centers and their intensity and position can shift or merge depending on the specific conditions of the sample, the dose or the thermal history. In some cases, peaks in this range can interfere with or overlap the main dosimetric peak, which can complicate deconvolution and dose evaluation.
 \end{itemize}
-
-In our case, we will use the Curve-fitting method, as it is (\textbf{razón????})
-
-\end{comment}

@@ -14,9 +14,9 @@ After explaining the theoretical background of the problem and introducing the a
 
 \vspace{10pt}
 
-First and foremost, we can start our analysis of the irradiation stage by looking at the evolution of the occupancy of the traps $n_i$ as a function of time. In Figure \ref{fig:irradiation_nievolution} it is shown that the most prominent difference between the two models lies in what occurs with the trap I, shown by the blue line of $n_I$. In the temperature independent model, we see that all traps behave in a very similar way; they get gradually filled over time, as the electron-hole pairs are generated. There is a perceptible downward curve in the end of the irradiation time for the $n_I$ trap, which could hint that the trap is being filled to its maximum capacity, but it is not very clear. In the temperature dependent model however, we see that the filling of the $n_I$ trap is much more noticeable, and in turn the growth of the rest of the traps is more pronounced. We see that, whithout a doubt, the trap I is saturated in the first few minutes of irradiation. % y qué pasa con la inclinación de la curva??
+First and foremost, we can start our analysis of the irradiation stage by looking at the evolution of the occupancy of the traps $n_i$ as a function of time. In Figure \ref{fig:irradiation_nievolution} it is shown that the most prominent difference between the two models lies in what occurs with the trap I, shown by the blue line of $n_I$. In the temperature independent model, we see that all traps behave in a very similar way; they get gradually filled over time, as the electron-hole pairs are generated. There is a perceptible downward curve in the end of the irradiation time for the $n_I$ trap, which could hint that the trap is being filled to its maximum capacity, but it is not very clear. In the temperature dependent model however, we see that the filling of the $n_I$ trap is much more noticeable, and in turn the growth of the rest of the traps is more pronounced. We see that, without a doubt, the trap I is saturated in the first few minutes of irradiation. % y qué pasa con la inclinación de la curva??
 
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Images/Irradiation Recombination.png}
     \caption{Recombination rates during the irradiation phase for both models. (a) Temperature-dependent model; (b) Temperature-independent model. The plotted quantities correspond to the radiative ($dm_R/dt$) and non-radiative ($dm_{NR}/dt$) recombination rates. Both models were subjected to a constant irradiation rate of $G = 1000$ cm$^{-3}$ s$^{-1}$ and a laboratory temperature of $T = 25$ \textdegree C during 3600 seconds.}
@@ -30,12 +30,12 @@ Also, the nearly flat and negligible $dm_{NR}(t)$ in both cases suggests that no
 
 \vspace{10pt}
 
-The last graph to analyze is the one introduced in Section \ref{sec:simulations} to validate the model. In Figure \ref{fig:irradiation_chneutrality} we can see that both models satisfy the charge neutrality condition, as the (cual es la condición????)
+The last graph to analyze is the one introduced in Section \ref{sec:simulations} to validate the model. In Figure \ref{fig:irradiation_chneutrality} we can see that both models satisfy the charge neutrality condition, as the total positive and negative charges are approximately equal at all times. The small deviation from the ideal value of 1 is on the order of $10^{-6}$, which is negligible and can be attributed to numerical errors in the simulations. This confirms that the model is consistent with the physical principles of charge conservation as introduced in equation \ref{eq:charge_neutrality}, and that the simulations have been done correctly.
 
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Images/Irradiation Charge neutrality.png}
-    \caption{Charge neutrality ratio for the LiF:Mg, Ti plotted against temperature during the irradiation phase for both models. (a) Temperature dependent model; (b) Temperature independent model. The plotted ratio corresponds to the total negative charge divided by the total positive charges in the system. Both simulations were performed under a constant generation rate of $G = 1000$ cm$^{-3}$ s$^{-1}$ and a laboratory temperature of $T = 25$ \textdegree C during 3600 seconds. The traps are labeled as follows: I (blue), II (orange), III (green), IV (red), V (purple), and s (brown).}
+    \caption{Charge neutrality ratio for the LiF:Mg, Ti plotted against temperature during the irradiation phase for both models. (a) Temperature dependent model; (b) Temperature independent model. The plotted ratio corresponds to the total negative charge divided by the total positive charges in the system. Both simulations were performed under a constant generation rate of $G = 1000$ cm$^{-3}$ s$^{-1}$ and a laboratory temperature of $T = 25$ \textdegree C during 3600 seconds.}
     \label{fig:irradiation_chneutrality}
 \end{figure}
 
@@ -45,21 +45,21 @@ After the irradiation stage, we can now analyze the results obtained from the \t
 
 \vspace{10pt}
 
-Again, the graphs will be presented in pairs, one for the temperature independent model and one for the temperature dependent model. The first graph to analyze is the evolution of the occupancy of the traps $n_i$ as a function of time, which can be seen in Figure \ref{fig:relaxation_nievolution}. At a first glance, one can clearly see a difference between the two figures, divided by one main factor: how does the detrapping work. By keeping the laboratory temperature at a fixed value, the probability of thermal detrapping is constant over time, and without electron-hole pair generation, the system evolves solely thorugh the release of previously trapped carriers. % por qué entonces la trampa I se vacía y las otras no?
+Again, the graphs will be presented in pairs, one for the temperature independent model and one for the temperature dependent model. The first graph to analyze is the evolution of the occupancy of the traps $n_i$ as a function of time, which can be seen in Figure \ref{fig:relaxation_nievolution}. At a first glance, one can clearly see a difference between the two figures, divided by one main factor: how does the detrapping work. By keeping the laboratory temperature at a fixed value, the probability of thermal detrapping is constant over time, and without electron-hole pair generation, the system evolves solely through the release of previously trapped carriers. % por qué entonces la trampa I se vacía y las otras no?
 As a result, the relaxation dynamics are governed by the intrisic properties of each trap ---specifically the activation energy and frequency factor---, which determine how trapped carriers will evolve. 
 
 \vspace{10pt}
 
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Images/Relaxation n_i evolution.png}
     \caption{Evolution of trap concentrations $n_i(t)$  plotted against time for the LiF:Mg, Ti during the relaxation phase for both models (a) Temperature dependent model; (b) Temperature independent model. Both were subjected to a constant generation rate of $G = 0$ cm$^{-3}$ s$^{-1}$ and a laboratory temperature of $T = 25$ \textdegree C during 604,800 seconds. The traps are labeled as follows: I (blue), II (orange), III (green), IV (red), V (purple), and s (brown).}
     \label{fig:relaxation_nievolution}
 \end{figure}
 
-The decay of the trap I in both models is attributed to the fact that it is the closest trap to the Fermi level, and therefore the one with the lowest activation energy. This means that, even though the frequency factor is constant in the temperature independent model, the carriers will still be able to escape from this trap more easily than from the others. In the temperature dependent model we see that the decay of trap I is much more pronounced, as the thermal dynamics allow for a higher probability of detrapping. The other traps, on the other hand, remain mostly unnfafected due to their deeper energy levels, which result in significantly lower detrapping probabilities at the laboratory temperature. This contrast highlights the selective sensitivity of shallow traps to a certain thermal activation temperature, while deeper traps retain their occupancy over longer timescales. It also explains the need for a third stage of the process, where this temperature would be increased to allow the detrapping of all the excited electrons and holes and returning to the equilibrium state from the metastable state the material finds itself in after the relaxation phase.
+The decay of the trap I in both models is attributed to the fact that it is the closest trap to the Fermi level, and therefore the one with the lowest activation energy. This means that, even though the frequency factor is constant in the temperature independent model, the carriers will still be able to escape from this trap more easily than from the others. In the temperature dependent model we see that the decay of trap I is much more pronounced, as the thermal dynamics allow for a higher probability of detrapping. The other traps, on the other hand, remain mostly unaffected due to their deeper energy levels, which result in significantly lower detrapping probabilities at the laboratory temperature. This contrast highlights the selective sensitivity of shallow traps to a certain thermal activation temperature, while deeper traps retain their occupancy over longer timescales. It also explains the need for a third stage of the process, where this temperature would be increased to allow the detrapping of all the excited electrons and holes and returning to the equilibrium state from the metastable state the material finds itself in after the relaxation phase.
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Images/Relaxation Recombination.png}
     \caption{Recombination rates for the LiF:Mg, Ti during the relaxation phase for both models. (a) Temperature dependent model; (b) Temperature independent model. The plotted quantities correspond to the radiative ($dm_R/dt$) and non-radiative ($dm_{NR}/dt$) recombination rates. Both models were subjected to a constant generation rate of $G = 0$ cm$^{-3}$ s$^{-1}$ and a laboratory temperature of $T = 25$ \textdegree C during 604,800 seconds.}
@@ -68,7 +68,7 @@ The decay of the trap I in both models is attributed to the fact that it is the 
 
 \vspace{10pt}
 
-The next graph to analyze is the one showing the recombination rates during the relaxation stage, which can be seen in Figure \ref{fig:relaxation_recombination}. In this stage, the recombination rate $dm_{R(t)}$ exhibists a sharp decay in both models, consistent with the rapid depletion of free carriers following the irradiation stop. This behavior is driven by the thermal detrapping from the shallow traps --like the trap I we mentioned in the previous paragraph---, which quickly empties when stabilizing the laboratory temperature. Again, the nearly flat $dm_{NR}(t)$ in both cases suggests that non-radiative processes play a minimal role under these conditions.
+The next graph to analyze is the one showing the recombination rates during the relaxation stage, which can be seen in Figure \ref{fig:relaxation_recombination}. In this stage, the recombination rate $dm_{R(t)}$ exhibits a sharp decay in both models, consistent with the rapid depletion of free carriers following the irradiation stop. This behavior is driven by the thermal detrapping from the shallow traps --like the trap I we mentioned in the previous paragraph---, which quickly empties when stabilizing the laboratory temperature. Again, the nearly flat $dm_{NR}(t)$ in both cases suggests that non-radiative processes play a minimal role under these conditions.
 
 \vspace{10pt}
 
@@ -78,10 +78,10 @@ Although the overal shape of the curves is similar, the temperature dependent mo
 
 The charge neutrality plots shown in Figure \ref{fig:relaxation_chneutrality} confirm that the model preserves global charge conservation throughout the relaxation phase. Both the temperature independent and dependent model maintain a nearly perfect balance between positive and negative charges, with only a negligible deviation on the order of $10^{-6}$ at early times. The stability of these two plots supports the robustness of the simulations done for this phase, and reinforces the consistency of the relaxation dynamics.
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Images/Relaxation Charge neutrality.png}
-    \caption{Charge neutrality ratio for the LiF:Mg, Ti plotted against temperature during the relaxation phase for both models. (a) Temperature dependent model; (b) Temperature independent model. The plotted ratio corresponds to the total negative charge divided by the total positive charges in the system. Both simulations were performed under a constant generation rate of $G = 0$ cm$^{-3}$ s$^{-1}$ and a laboratory temperature of $T = 25$ \textdegree C during 604,800 seconds. The traps are labeled as follows: I (blue), II (orange), III (green), IV (red), V (purple), and s (brown).}
+    \caption{Charge neutrality ratio for the LiF:Mg, Ti plotted against temperature during the relaxation phase for both models. (a) Temperature dependent model; (b) Temperature independent model. The plotted ratio corresponds to the total negative charge divided by the total positive charges in the system. Both simulations were performed under a constant generation rate of $G = 0$ cm$^{-3}$ s$^{-1}$ and a laboratory temperature of $T = 25$ \textdegree C during 604,800 seconds.}
     \label{fig:relaxation_chneutrality}
 \end{figure}
 
@@ -91,17 +91,17 @@ The charge neutrality plots shown in Figure \ref{fig:relaxation_chneutrality} co
 
 We can now move onto the last stage of the process, the \textit{heating} stage. Here we will obtain the previously introduced TL glow curve, as one of the graphs we have been doing so far. The results obtained from the simulations in this section can be seen in Figures \ref{fig:GC_ActivationAndPeakTemperatures}--\ref{fig:heating_chneutrality}. 
 
-\vspace{10pt}
-Before the TL glow curve, we must first analyze what is happening with the occupancy of the traps. Taking now the temperature in our X axis, we can see at a first glance in Figure \ref{fig:GC_ActivationAndPeakTemperatures}, that both models show a similar behavior. As expected, the trap I is the first one to be emptied as it is the closest to the Fermi level. And as it has been seen, it is also here where we see the most significant difference between the two models. The starting point of trap I is notably lower in the tempreature dependent model, and can be attributed to thermal detrapping that we have already seen in the irradiation and relaxation stages, all of them due to the influence of the frequency factor. Because trap I we have seen to be shallow, even moderate temperature increase is sufficient to release the charged carriers. In the original model, we see that this trap withstands the temperature a little longer, and is not emptied until surpassing the first 100 \textdegree C. 
-
-\vspace{10pt}
-
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{Images/GC_ActivationAndPeakTemperatures.png}
     \caption{Evolution of trap concentrations $n_i(t)$ for the LiF:Mg, Ti plotted against temperature during the heating phase for both models. (a) Temperature dependent model; (b) Temperature independent model. For each trap, both the activation temperature (filled circle) and peak temperature (star icon) are indicated. The peak temperature has a dotted line that reaches the X axis and indicates the specific value for each trap. The simulations were performed under a constant generation rate of $G = 0$ cm$^{-3}$ s$^{-1}$ and an increasing laboratory temperature from 0 \textdegree C to 400 \textdegree C during 400 seconds. The traps are labeled as follows: I (blue), II (orange), III (green), IV (red), V (purple), and s (brown).}
     \label{fig:GC_ActivationAndPeakTemperatures}
 \end{figure}
+
+\vspace{10pt}
+Before the TL glow curve, we must first analyze what is happening with the occupancy of the traps. Taking now the temperature in our X axis, we can see at a first glance in Figure \ref{fig:GC_ActivationAndPeakTemperatures}, that both models show a similar behavior. As expected, the trap I is the first one to be emptied as it is the closest to the Fermi level. And as it has been seen, it is also here where we see the most significant difference between the two models. The starting point of trap I is notably lower in the tempreature dependent model, and can be attributed to thermal detrapping that we have already seen in the irradiation and relaxation stages, all of them due to the influence of the frequency factor. Because trap I we have seen to be shallow, even moderate temperature increase is sufficient to release the charged carriers. In the original model, we see that this trap withstands the temperature a little longer, and is not emptied until surpassing the first 100 \textdegree C. 
+
+\vspace{10pt}
 
 The evolution of traps II through V during the heating phase is mostly similar across both models. Each trap empties within its own temperature range, determined by its activation energy. After a certain \textit{activation temperature} $T_0$ is reached, the traps will experience a sequencial release of carriers as temperature increases. On their way to emptying, they will go through a temperature at which the trap releases carriers at the highest rate. This temperature can be called \textit{peak temperature} $T_p$, and it reflects the characteristic thermal energy required to efficiently empty that trap. It is directly related to the TL glow curve since the luminescence signal is proportional to the rate of carrier release from traps followed by radiative recombination (we remember this from equation \ref{eq:intensity}), and therefore each peak observed in the TL glow curve corresponds to this same peak temperature $T_p$ of a trap. Its position and shape provide valuable information about the trap's activation energy, so analyzing the evolution of trap occupancies and identifying their peak temperatures not only characterizes the thermal behavior of the system but also allows the interpretation of the TL glow curve based on the behavior of the traps.
 
@@ -111,7 +111,7 @@ In Figure \ref{fig:GC_ActivationAndPeakTemperatures}, we see that trap $s$ has n
 
 \vspace{10pt}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Images/GC_GlowCurve.png}
     \caption{Thermoluminescence (TL) glow curves for the LiF:Mg,Ti material plotted against temperature during the heating phase for both models. (a) Temperature dependent model; (b) Temperature independent model. The curves correspond to the radiative recombination rate $dm_R/dt$, showing the intensity of light emitted as trapped carriers recombine. For each visible peak, both the activation temperature (filled circle) and the peak temperature (star icon) are indicated. A vertical dotted line extends from each peak temperature to the X-axis, where the temperature value is labeled. The simulations were performed under a constant generation rate of $G = 0$ cm$^{-3}$ s$^{-1}$ and an increasing laboratory temperature from 0 \textdegree C to 400 \textdegree C during 400 seconds. The traps are labeled as follows: I (blue), II (orange), III (green), IV (red), V (purple), and s (brown).}
@@ -124,15 +124,13 @@ And now finally, we can obtain the TL glow curve from the simulations. In Figure
 
 Furthermore, we can see that indeed the peak temperature values from \ref{fig:GC_ActivationAndPeakTemperatures} closely match those observed in the TL glow curve for both models. This strong agreement confirms that the temperature at which each trap empties coincides with the point of maximum luminescence intensity in the glow curve. Physically, this reinforces the interpretation that the TL glow peak directly reflects the maximum rate of carrier release from traps. The fact that this correspondence holds in both models despite their fundamental difference suggests that the thermal release of charge carriers is primarily governed by the intrinsic trap properties ---such as activation energy, trap activation temperature and frequency factor--- rather than by the specific thermal history prior to heating. This implies that the glow peak position is a robust indicator of trap characteristics, such as their activation mechanism, and luminiscent response. 
 
-qué más puedo decir?????
-
 \vspace{10pt}
 
-As a final note, we can check the validity of the model by looking at the charge neutrality condition, which can be seen in Figure \ref{fig:heating_chneutrality}. As we can see, both models satisfy the charge neutrality condition, as the total positive and negative charges are equal at all times. This confirms that the model is consistent with the physical principles of charge conservation, and that the simulations have been done correctly.
+As a final note, we can check the validity of the model by looking at the charge neutrality condition, which can be seen in Figure \ref{fig:heating_chneutrality}. As we can see, there is a deviation from the ideal value of 1. A plausible explanation for this is that the temperature increase during the heating phase leads to a higher mobility of the charge carriers. As the temperature increases rapidly during heating, small numerical imbalances between positive and negative charges can become amplified. This is particularly true for the temperature dependent model, where the frequency factor is a function of temperature, leading to a more pronounced effect. Nonetheless, the results still offer a meaningful approximation to the expected physical behavior.
 
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Images/Heating Charge neutrality.png}
-    \caption{Charge neutrality ratio for the LiF:Mg, Ti plotted against temperature during the heating phase for both models. (a) Temperature dependent model; (b) Temperature independent model. The plotted ratio corresponds to the total negative charge divided by the total positive charges in the system. Both simulations were performed under a constant generation rate of $G = 0$ cm$^{-3}$ s$^{-1}$ and an increasing laboratory temperature from 0 \textdegree C to 400 \textdegree C during 400 seconds. The traps are labeled as follows: I (blue), II (orange), III (green), IV (red), V (purple), and s (brown).}
+    \caption{Charge neutrality ratio for the LiF:Mg, Ti plotted against temperature during the heating phase for both models. (a) Temperature dependent model; (b) Temperature independent model. The plotted ratio corresponds to the total negative charge divided by the total positive charges in the system. Both simulations were performed under a constant generation rate of $G = 0$ cm$^{-3}$ s$^{-1}$ and an increasing laboratory temperature from 0 \textdegree C to 400 \textdegree C during 400 seconds.}
     \label{fig:heating_chneutrality}
 \end{figure}

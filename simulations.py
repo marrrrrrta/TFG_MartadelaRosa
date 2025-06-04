@@ -21,8 +21,8 @@ from Functions.plotting import plot_results
 #---------------------------- EDITABLE CODE ------------------------------
 
 # Change this to the function you want to use
-FunctionUsed = diff_eqs_notemp
-GraphTitle = ' for just giggles notemp'
+FunctionUsed = diff_eqs_freqfactor
+GraphTitle = ' for just giggles diff eqs'
 
 # Coment this line if you want to keep the results from last run
 '''
@@ -105,7 +105,7 @@ irradiation = odeint(FunctionUsed, y0, t, args=(value,))
 n_I, n_II, n_III ,n_IV ,n_V ,n_s ,m_R ,m_NR ,n_c , n_v = irradiation.T
 
 # Plotting the results
-plot_results(irradiation, 'Results/', 'IRRADIATION' + GraphTitle, t, value)
+#plot_results(irradiation, 'Results/', 'IRRADIATION' + GraphTitle, t, value)
 
 #-------------------------------------------------------------------------
 
@@ -128,7 +128,7 @@ relaxation = odeint(FunctionUsed, y0, t, args=(value,))
 n_I, n_II, n_III ,n_IV ,n_V ,n_s ,m_R ,m_NR ,n_c , n_v = relaxation.T
 
 # Plotting the results
-plot_results(relaxation, 'Results/', 'RELAXATION' + GraphTitle, t, value)
+#plot_results(relaxation, 'Results/', 'RELAXATION' + GraphTitle, t, value)
 
 #-------------------------------------------------------------------------
 
@@ -143,7 +143,7 @@ npoints = 400
 t = np.linspace(0, npoints-1, npoints)
 
 # Initial conditions vector
-n_I_0,n_II_0,n_III_0,n_IV_0,n_V_0,n_s_0,m_NR_0,m_R_0,n_c_0,n_v_0=n_I[1],n_II[1],n_III[1],n_IV[1],n_V[1],n_s[1],m_R[1],m_NR[1],n_c[1], n_v[1]
+n_I_0,n_II_0,n_III_0,n_IV_0,n_V_0,n_s_0,m_NR_0,m_R_0,n_c_0,n_v_0=n_I[-1],n_II[-1],n_III[-1],n_IV[-1],n_V[-1],n_s[-1],m_R[-1],m_NR[-1],n_c[-1], n_v[-1]
 y0 = [n_I_0,n_II_0,n_III_0,n_IV_0,n_V_0,n_s_0,m_NR_0,m_R_0,n_c_0,n_v_0]
 
 # Solving the differential equations system

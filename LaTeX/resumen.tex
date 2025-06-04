@@ -1,9 +1,18 @@
 \chapter*{Resumen}
 \addcontentsline{toc}{chapter}{Resumen. Palabras clave}
 
-Escriba aquí un resumen de la memoria en castellano que contenga entre 100 y 300 palabras. Las palabras clave serán entre 3 y 6.
+Este trabajo supone la simulación y el análisis de un modelo matemático que describe la respuesta termoluminiscente (TL) del LiF:Mg, Ti; un material ampliamente utilizado en la dosimetría de radiación. Los procesos físicos subyacentes a este fenómeno se han traducido en un conjunto de ecuaciones diferenciales, y de ahí se han desarrollado dos modelos; uno con un factor de frecuencia constante y otro con un factor de frecuencia que depende de la temperatura, cuya dependencia está fundamentada en los principios de la física estadística cuántica.
 
-\paragraph{Palabras clave:} palabra clave 1; palabra clave 2; palabra clave 3; palabra clave 4 
+\vspace{10pt}
+
+El entorno de la simulación, construído en Python, resuelve numéricamente el sistema de ecuaciones diferenciales para las tres fases clave de la termoluminiscencia: irradiación, relajación y calentamiento. Ambos modelos reproducen con éxito la curva termoluminiscente característica para el LiF:Mg, Ti vista en los datos experimentales, pero el modelo dependiende de la temperatura consigue una descripción más precisa de las trampas poco profundas. Este modelo muestra que la trampa I presenta una saturación más temprana, una mayor liberación términa y un cambio en la posición e intensidad de los picos en comparación con el modelo independiente de la temperatura. Las trampas más profundas (de II a V) muestran una variación menor entre ambos modelos, lo que sugiere que su comportamiento es menos sensible a la diferencia en la expresión del factor de frecuencia.
+
+\vspace{10pt}
+
+Las curvas termoluminiscentes simuladas reproducen los cinco picos característicos del LiF:Mg, Ti observados en los datos experimentales. La concordancia entre la temperatura pico y los máximos de la curva termoluminiscente refuerza la validez del modelo. Este trabajo no solo reproduce el comportamiento conocido de la TL del LiF:Mg, Ti, sino que también destaca la importancia de la dependencia de la temperatura en el factor de frecuencia, ya que mejora la capacidad del modelo para explicar la dinámica de los portadores de carga. Un trabajo futuro podría afinar aún más este modelo incorporando una dependencia de la temperatura más compleja.
+
+
+\paragraph{Palabras clave:} Termoluminiscencia; LiF:Mg, Ti; Radiación; Dosimetría; Simulación
 
 
 
@@ -16,6 +25,14 @@ Escriba aquí un resumen de la memoria en castellano que contenga entre 100 y 30
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract. Keywords}
 
-Insert here the abstract of the report with an extension between 100 and 300 words. 
+This work presents the simulation and analysis of a mathematical model for the thermoluminescent (TL) response of LiF:Mg, Ti; a material widely used in radiation dosimetry. The physical processes underlying thermoluminescence were drawn through a set of differential equations, and two models were developed: one with a constant frequency factor and another with a temperature dependent frequency factor based on quantum statistical mechanics.
 
-\paragraph{Keywords:} keyword1; keyword2; keyword3; keyword4
+\vspace{10pt}
+
+The simulation environment, built in Python, numerically solved the differential equations for the three key phases of the TL process: irradiation, relaxation, and heating. Both models successfully reproduce the characteristic TL glow curve of LiF:Mg, Ti, but a more accurate representation of shallow traps is achieved with the temperature dependent model. This model shows that trap I exhibits earlier saturation, greater thermal release, and a shift in peak position and intensity compared to the temperature independent model. Deeper traps (II to V) showed minimal variation between models, suggesting that their behavior is less sensitive to the difference in the frequency factor's expression.
+
+\vspace{10pt}
+
+The simulated TL glow curves reproduced the characteristic five peaks of LiF:Mg, Ti shown in experimental data. The agreement between the peak temperature and the glow curve maxima reinforces the model's validity. This work not only reproduces the known TL behavior of LiF:Mg, Ti but also highlights the significance of temperature dependency in the frequency factor, enhancing the model's ability to explain charge carrier dynamics. Future work may refine this model further, potentially incorporating more complex temperature dependencies.
+
+\paragraph{Keywords:} Thermoluminescence; LiF:Mg, Ti; Radiation; Dosimetry; Simulation

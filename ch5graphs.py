@@ -133,9 +133,9 @@ plt.tight_layout()
 #plt.savefig('LaTeX/Images/Irradiation_Comparison.png', dpi=300, bbox_inches='tight')
 #plt.show()'''
 
-#plot_column1(irradiation1, irradiation2, 'LaTeX/Images/Irradiation ', t, 'upper left', 'Time (s)')
-#plot_column2(irradiation1, irradiation2, 'LaTeX/Images/Irradiation ', t, value, 'upper left', 'Time (s)')
-plot_column3(irradiation1, irradiation2, 'LaTeX/Images/Irradiation ', t, value, 'Time (s)')
+#plot_column1(irradiation1, irradiation2, 'LaTeX/Images/Irradiation ', t, 'upper left', 'Time (s)', 'Irradiation phase')
+#plot_column2(irradiation1, irradiation2, 'LaTeX/Images/Irradiation ', t, value, 'upper left', 'Time (s)', 'Irradiation phase')
+#plot_column3(irradiation1, irradiation2, 'LaTeX/Images/Irradiation ', t, value, 'Time (s)', 'Irradiation phase')
 
 #-------------------------------------------------------------------------
 
@@ -180,9 +180,9 @@ plt.tight_layout()
 #plt.savefig('LaTeX/Images/Relaxation_Comparison.png', dpi=300, bbox_inches='tight')
 #plt.show()'''
 
-#plot_column1(relaxation1, relaxation2, 'LaTeX/Images/Relaxation ', t, 'center right', 'Time (s)')
-#plot_column2(relaxation1, relaxation2, 'LaTeX/Images/Relaxation ', t, value, 'upper right', 'Time (s)')
-plot_column3(relaxation1, relaxation2, 'LaTeX/Images/Relaxation ', t, value, 'Time (s)')
+#plot_column1(relaxation1, relaxation2, 'LaTeX/Images/Relaxation ', t, 'center right', 'Time (s)', 'Relaxation phase')
+#plot_column2(relaxation1, relaxation2, 'LaTeX/Images/Relaxation ', t, value, 'upper right', 'Time (s)', 'Relaxation phase')
+#plot_column3(relaxation1, relaxation2, 'LaTeX/Images/Relaxation ', t, value, 'Time (s)', 'Relaxation phase')
 
 #-------------------------------------------------------------------------
 
@@ -197,24 +197,36 @@ npoints = 400
 t = np.linspace(0, npoints-1, npoints)
 
 # Initial conditions vector
-n_I_01, n_II_01, n_III_01, n_IV_01, n_V_01, n_s_01, m_NR_01, m_R_01, n_c_01, n_v_01 = n_I1[1], n_II1[1], n_III1[1], n_IV1[1], n_V1[1], n_s1[1], m_R1[1], m_NR1[1], n_c1[1], n_v1[1]
+n_I_01, n_II_01, n_III_01, n_IV_01, n_V_01, n_s_01, m_NR_01, m_R_01, n_c_01, n_v_01 = n_I1[-1], n_II1[-1], n_III1[-1], n_IV1[-1], n_V1[-1], n_s1[-1], m_R1[-1], m_NR1[-1], n_c1[-1], n_v1[-1]
 y01 = [n_I_01, n_II_01, n_III_01, n_IV_01, n_V_01, n_s_01, m_NR_01, m_R_01, n_c_01, n_v_01]
 
-n_I_02, n_II_02, n_III_02, n_IV_02, n_V_02, n_s_02, m_NR_02, m_R_02, n_c_02, n_v_02 = n_I2[1], n_II2[1], n_III2[1], n_IV2[1], n_V2[1], n_s2[1], m_R2[1], m_NR2[1], n_c2[1], n_v2[1]
+n_I_02, n_II_02, n_III_02, n_IV_02, n_V_02, n_s_02, m_NR_02, m_R_02, n_c_02, n_v_02 = n_I2[-1], n_II2[-1], n_III2[-1], n_IV2[-1], n_V2[-1], n_s2[-1], m_R2[-1], m_NR2[-1], n_c2[-1], n_v2[-1]
 y02 = [n_I_02, n_II_02, n_III_02, n_IV_02, n_V_02, n_s_02, m_NR_02, m_R_02, n_c_02, n_v_02]
 
 # Solving the differential equations system
 value.E_I, value.E_II, value.E_III, value.E_IV, value.E_V, value.E_s = E_I, E_II, E_III, E_IV, E_V, E_s
 heating1 = odeint(FunctionUsed, y01, t, args=(value,))
 n_I1, n_II1, n_III1 ,n_IV1 ,n_V1 ,n_s1 ,m_R1 ,m_NR1 ,n_c1 , n_v1 = heating1.T
+'''dm_R = m_R1 * value.A_mn_R * n_c1
+dm_NR = m_NR1 * value.A_mn_NR * n_c1
+heating1 = np.column_stack((heating1, dm_R, dm_NR))'''
 
 value.E_I, value.E_II, value.E_III, value.E_IV, value.E_V, value.E_s = 1.19, 1.38, 1.68, 1.78, 2.12, 3.00  # Original values
 heating2 = odeint(diff_eqs_notemp, y02, t, args=(value,))
 n_I2, n_II2, n_III2 ,n_IV2 ,n_V2 ,n_s2 ,m_R2 ,m_NR2 ,n_c2 , n_v2 = heating2.T
+'''dm_R = m_R2 * value.A_mn_R * n_c2
+dm_NR = m_NR2 * value.A_mn_NR * n_c2
+heating2 = np.column_stack((heating2, dm_R, dm_NR))'''
 
-#plot_column1(heating1, heating2, 'LaTeX/Images/Heating ', t, 'upper left', 'Temperature (ºC)')
-#plot_column2(heating1, heating2, 'LaTeX/Images/Heating ', t, value, 'upper right', 'Temperature (ºC)')
-plot_column3(heating1, heating2, 'LaTeX/Images/Heating ', t, value, 'Temperature (ºC)')
+#plot_column1(heating1, heating2, 'LaTeX/Images/Heating ', t, 'upper left', 'Temperature (ºC)', 'Heating phase')
+#plot_column2(heating1, heating2, 'LaTeX/Images/Heating ', t, value, 'upper right', 'Temperature (ºC)', 'Heating phase')
+plot_column3(heating1, heating2, 'LaTeX/Images/Heating ', t, value, 'Temperature (ºC)', 'Heating phase')
+
+# Saving and exporting to excel
+results1 = pd.DataFrame(heating1, columns=column_names)
+results2 = pd.DataFrame(heating2, columns=column_names)
+results1.to_excel('Results/Heating_Temperature_Dependent.xlsx', index=False)
+results2.to_excel('Results/Heating_Temperature_Independent.xlsx', index=False)
 
 
 #-------------------------------------------------------------------------
@@ -231,9 +243,9 @@ ni_curves2 = np.array([n_I2, n_II2, n_III2, n_IV2, n_V2, n_s2]).T
 trap_labels = ['n$_I(t)$', 'n$_{II}(t)$', 'n$_{III}(t)$', 'n$_{IV}(t)$', 'n$_V(t)$']
 colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown']
 
-plt.figure(figsize=(15, 6))
+plt.figure(figsize=(15, 8))
 plt.subplot(1, 2, 1)
-plt.gca().text(0.5, -0.13, '(a)', transform=plt.gca().transAxes, fontsize=10, va='top', ha='center')
+plt.gca().text(0.5, -0.13, '(a)', transform=plt.gca().transAxes, fontsize=12, va='top', ha='center')
 plt.plot(t, ni_curves1[:, 5], label='n$_s(t)$', color=colors[5])
 for i in reversed(range(5)):  # exclude n_s
     n = ni_curves1[:, i]
@@ -255,11 +267,11 @@ for i in reversed(range(5)):  # exclude n_s
 
 plt.xlabel('Temperature (°C)', fontsize=14)
 plt.ylabel('Trap concentration (cm$^{-3}$)', fontsize=14)
-plt.title('Temperature dependent model', fontsize=14)
-plt.legend(reverse=True, loc='upper left', fontsize='small')
+plt.title('Temperature dependent model', fontsize=16)
+plt.legend(reverse=True, loc='upper left')
 
 plt.subplot(1, 2, 2)
-plt.gca().text(0.5, -0.13, '(b)', transform=plt.gca().transAxes, fontsize=10, va='top', ha='center')
+plt.gca().text(0.5, -0.13, '(b)', transform=plt.gca().transAxes, fontsize=12, va='top', ha='center')
 plt.plot(t, ni_curves2[:, 5], label='n$_s(t)$', color=colors[5])
 for i in reversed(range(5)):  # exclude n_s
     n = ni_curves2[:, i]
@@ -281,17 +293,17 @@ for i in reversed(range(5)):  # exclude n_s
     
 plt.xlabel('Temperature (°C)', fontsize=14)
 plt.ylabel('Trap concentration (cm$^{-3}$)', fontsize=14)
-plt.title('Temperature independent model', fontsize=14)
-plt.legend(reverse=True, loc='upper left', fontsize='small')
-plt.suptitle(r'n$_{i}$ evolution', fontsize=16)
+plt.title('Temperature independent model', fontsize=16)
+plt.legend(reverse=True, loc='upper left')
+plt.suptitle(r'n$_{i}$ evolution for the Heating phase', fontsize=18)
 plt.tight_layout()
 plt.savefig('LaTeX/Images/GC_ActivationAndPeakTemperatures.png', dpi=600, bbox_inches='tight', transparent=True)
-plt.show()'''
+plt.show()
 
 #-------------------------------------------------------------------------
 ## 3.2  GLOW CURVE
 
-'''dm_R1 = m_R1 * value.A_mn_R * n_c1
+dm_R1 = m_R1 * value.A_mn_R * n_c1
 dm_NR1 = m_NR1 * value.A_mn_NR * n_c1
 
 dm_R2 = m_R2 * value.A_mn_R * n_c2
@@ -307,9 +319,9 @@ I_peaks2 = dm_R2[peaks2]
 
 colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:purple', 'tab:red', 'tab:brown']
 # Plotting the glow curves
-plt.figure(figsize=(15, 6))
+plt.figure(figsize=(15, 8))
 plt.subplot(1, 2, 1)
-plt.gca().text(0.5, -0.13, '(a)', transform=plt.gca().transAxes, fontsize=10, va='top', ha='center')
+plt.gca().text(0.5, -0.13, '(a)', transform=plt.gca().transAxes, fontsize=12, va='top', ha='center')
 plt.plot(t, dm_R1, label=r'dm$_R$(t)')
 plt.plot(t, dm_NR1, label=r'dm$_{NR}$(t)')
 for t_peak, i_peak, i in zip(T_peaks1, I_peaks1, range(len(T_peaks1))):
@@ -327,11 +339,11 @@ plt.text(manual_T, -0.02 * max(dm_R1), '256°C', ha='center', va='top', fontsize
 
 plt.legend()
 plt.xlabel('Temperature (°C)', fontsize=14)
-plt.ylabel(r'$\frac{dm_R}{dt}$ [u.a.]', fontsize=14)
-plt.title('Temperature dependent model', fontsize=14)
+plt.ylabel('Intensity [u.a.]', fontsize=14)
+plt.title('Temperature dependent model', fontsize=16)
 
 plt.subplot(1, 2, 2)
-plt.gca().text(0.5, -0.13, '(b)', transform=plt.gca().transAxes, fontsize=10, va='top', ha='center')
+plt.gca().text(0.5, -0.13, '(b)', transform=plt.gca().transAxes, fontsize=12, va='top', ha='center')
 plt.plot(t, dm_R2, label=r'dm$_R$(T)')
 plt.plot(t, dm_NR2, label=r'dm$_{NR}$(T)')
 for t_peak, i_peak, i in zip(T_peaks2, I_peaks2, range(len(T_peaks2))):
@@ -347,13 +359,13 @@ plt.plot([manual_T, manual_T], [0, manual_I], linestyle='dotted', color=colors[4
 plt.plot(manual_T, 0, 'o', color=colors[4])
 plt.text(manual_T, -0.02 * max(dm_R2), '269°C', ha='center', va='top', fontsize=9, color=colors[4])
 plt.xlabel('Temperature (°C)', fontsize=14)
-plt.ylabel(r'$\frac{dm_R}{dt}$ [u.a.]', fontsize=14)
-plt.title('Temperature independent model', fontsize=14)
+plt.ylabel('Intensity [u.a.]', fontsize=14)
+plt.title('Temperature independent model', fontsize=16)
 
-plt.suptitle('Recombination', fontsize=16)
+plt.suptitle('Recombination for the Heating phase', fontsize=18)
 plt.legend()
 plt.tight_layout()
-plt.savefig('LaTeX/Images/GC_GlowCurve.png', dpi=300, bbox_inches='tight')
+plt.savefig('LaTeX/Images/GC_GlowCurve.png', dpi=600, bbox_inches='tight')
 plt.show()'''
 
 
