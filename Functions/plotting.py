@@ -1,4 +1,5 @@
 # Plots and saves the results to the 'Results' folder
+from matplotlib import gridspec
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -251,16 +252,11 @@ def plot_column3(odeint_solution1, odeint_solution2, save_path, x_axis, value, x
     n_I1, n_II1, n_III1 ,n_IV1 ,n_V1 ,n_s1 ,m_R1 ,m_NR1 ,n_c1 , n_v1 = odeint_solution1.T
     n_I2, n_II2, n_III2 ,n_IV2 ,n_V2 ,n_s2 ,m_R2 ,m_NR2 ,n_c2 , n_v2 = odeint_solution2.T
     
-    denominator = m_R1 + m_NR1 + n_v1
-    denominator[denominator == 0] = np.nan
+    denominator = m_R1 + m_NR1
     c_neutrality1 = (n_c1 + n_I1 + n_II1 + n_III1 + n_IV1 + n_V1 + n_s1)/denominator
-    c_neutrality1 = c_neutrality1[:-50]
-    x_axis = x_axis[:-50]
-    
-    denominator = m_R2 + m_NR2 + n_v2
-    denominator[denominator == 0] = np.nan
+
+    denominator = m_R2 + m_NR2
     c_neutrality2 = (n_c2 + n_I2 + n_II2 + n_III2 + n_IV2 + n_V2 + n_s2)/denominator
-    c_neutrality2 = c_neutrality2[:-50]
     
     # Plotting
     plt.figure(figsize=(15, 6))
@@ -270,7 +266,8 @@ def plot_column3(odeint_solution1, odeint_solution2, save_path, x_axis, value, x
     plt.plot(x_axis, c_neutrality1)
     plt.xlabel(xaxis_label, fontsize=14)
     plt.ylabel('Charge neutrality ratio', fontsize=14)
-    plt.ylim(0.5, 10)
+    plt.ylim(0.95, 1.05)
+
     plt.title('Temperature dependent model', fontsize=16)
 
     plt.subplot(1, 2, 2)
@@ -278,11 +275,10 @@ def plot_column3(odeint_solution1, odeint_solution2, save_path, x_axis, value, x
     plt.plot(x_axis, c_neutrality2)
     plt.xlabel(xaxis_label, fontsize=14)
     plt.ylabel('Charge neutrality ratio', fontsize=14)
-    plt.ylim(0.5, 10)
     plt.title('Temperature independent model', fontsize=16)
+    plt.ylim(0.95, 1.05)
     plt.suptitle('Charge neutrality for the ' + phase, fontsize=18)
     
     # Saving the results
     plt.savefig(save_path + 'Charge neutrality' + '.png', dpi=600, bbox_inches='tight')
     plt.show()
-    

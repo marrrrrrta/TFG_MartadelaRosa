@@ -59,7 +59,7 @@ def diff_eqs_notemp(y0, t, value):
     
     # Equations (3.3) and (3.6)
     dn_cdt = value.G - (dn_Idt + dn_IIdt + dn_IIIdt + dn_IVdt + dn_Vdt + dn_sdt) - value.A_mn_R * m_R * n_c - value.A_mn_NR * m_NR * n_c
-    dn_vdt = value.G - (p_R_h * m_R + p_NR_h * m_NR) - (value.A_R * (value.M_R - m_R) + value.A_NR * (value.M_NR - m_NR)) * n_v
+    dn_vdt = value.G + (p_R_h * m_R + p_NR_h * m_NR) - (value.A_R * (value.M_R - m_R) + value.A_NR * (value.M_NR - m_NR)) * n_v
 
     
     return dn_Idt, dn_IIdt, dn_IIIdt, dn_IVdt, dn_Vdt, dn_sdt, dm_Rdt, dm_NRdt, dn_cdt, dn_vdt

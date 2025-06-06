@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.23)  4 JUN 2025 20:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.23)  6 JUN 2025 13:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -750,11 +750,11 @@ Package hyperref Info: Link coloring ON on input line 60.
 \openout5 = `plantilla_TFG_CienciasUCO_2022_utf8.out'.
 
  (./portada.tex
-<logo_ciencias.png, id=90, 157.5486pt x 157.5486pt>
+<logo_ciencias.png, id=90, 430.2474pt x 428.802pt>
 File: logo_ciencias.png Graphic file (type png)
 <use logo_ciencias.png>
 Package pdftex.def Info: logo_ciencias.png  used on input line 23.
-(pdftex.def)             Requested size: 170.71652pt x 170.71729pt.
+(pdftex.def)             Requested size: 170.71652pt x 170.14372pt.
 
 
 <fondo_portada.png, id=92, 578.16pt x 831.105pt>
@@ -796,36 +796,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ] (./plantilla_TFG_CienciasUCO_2022_utf8.lof
+Overfull \hbox (3.38144pt too wide) in paragraph at lines 14--14
+ [][] [][][]\T1/cmr/m/n/12 Radiative and non-radiative re-com-bi-na-tion rates dur-ing the re-lax-ation phase 
+ []
 
-[3
-
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
-[4])
+)
 \tf@lof=\write7
 \openout7 = `plantilla_TFG_CienciasUCO_2022_utf8.lof'.
 
 
 
-[5] (./plantilla_TFG_CienciasUCO_2022_utf8.lot)
+[3
+
+] (./plantilla_TFG_CienciasUCO_2022_utf8.lot)
 \tf@lot=\write8
 \openout8 = `plantilla_TFG_CienciasUCO_2022_utf8.lot'.
 
 )
 
-[6
+[4
 
 ]
 \openout2 = `resumen.aux'.
 
  (./resumen.tex
 
-[7
+[5
 
 
 ])
 
-[8
+[6
 
 ]
 \openout2 = `capitulo1.aux'.
@@ -834,18 +835,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Chapter 1.
 
 
+[7
+
+
+
+
+])
+
+[8]
+\openout2 = `capitulo2.aux'.
+
+ (./capitulo2.tex
+Chapter 2.
+)
+Overfull \hbox (13.19684pt too wide) in paragraph at lines 16--83
+[]\T1/cmr/m/n/12 Ultimately, this study aims not only to re-pro-duce the char-ac-ter-is-tic be-hav-ior of LiF:Mg,Ti
+ []
+
+
+
 [9
 
 
 
 
-] Excluding 'comment' comment.)
+]
 
 [10]
-\openout2 = `capitulo2.aux'.
+\openout2 = `capitulo3.aux'.
 
- (./capitulo2.tex
-Chapter 2.
+ (./capitulo3.tex
+Chapter 3.
 
 
 [11
@@ -853,66 +873,47 @@ Chapter 2.
 
 
 
-])
-Overfull \hbox (13.19684pt too wide) in paragraph at lines 17--83
-[]\T1/cmr/m/n/12 Ultimately, this study aims not only to re-pro-duce the char-ac-ter-is-tic be-hav-ior of LiF:Mg,Ti
- []
-
-
-
-[12]
-\openout2 = `capitulo3.aux'.
-
- (./capitulo3.tex
-Chapter 3.
-
-
-[13
-
-
-
-
 ]
-<Images/FD_irradiation.png, id=324, 1437.9321pt x 353.1594pt>
+<Images/FD_irradiation.png, id=227, 1437.9321pt x 353.1594pt>
 File: Images/FD_irradiation.png Graphic file (type png)
 <use Images/FD_irradiation.png>
 Package pdftex.def Info: Images/FD_irradiation.png  used on input line 28.
 (pdftex.def)             Requested size: 455.24411pt x 111.80621pt.
-<Images/modeldiagram.pdf, id=325, 486.47546pt x 201.28801pt>
+<Images/modeldiagram.pdf, id=228, 486.47546pt x 201.28801pt>
 File: Images/modeldiagram.pdf Graphic file (type pdf)
 <use Images/modeldiagram.pdf>
 Package pdftex.def Info: Images/modeldiagram.pdf  used on input line 35.
 (pdftex.def)             Requested size: 455.24411pt x 188.3661pt.
 
 
-[14 <./Images/FD_irradiation.png> <./Images/modeldiagram.pdf>]
+[12 <./Images/FD_irradiation.png> <./Images/modeldiagram.pdf>]
+
+[13{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+[14]
 
 [15]
 
 [16]
 
 [17]
-
-[18]
-
-[19]
-<Images/Experimental_Glow_Curve.png, id=431, 722.7pt x 433.62pt>
+<Images/Experimental_Glow_Curve.png, id=336, 722.7pt x 433.62pt>
 File: Images/Experimental_Glow_Curve.png Graphic file (type png)
 <use Images/Experimental_Glow_Curve.png>
 Package pdftex.def Info: Images/Experimental_Glow_Curve.png  used on input line 237.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[20])
+[18])
 
-[21 <./Images/Experimental_Glow_Curve.png>]
+[19 <./Images/Experimental_Glow_Curve.png>]
 \openout2 = `capitulo4.aux'.
 
  (./capitulo4.tex
 Chapter 4.
 
 
-[22
+[20
 
 
 
@@ -923,123 +924,117 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 56.
 
 
+[21]
+
+[22])
+
 [23]
-
-[24])
-
-[25]
 \openout2 = `capitulo5.aux'.
 
  (./capitulo5.tex
 Chapter 5.
-<Images/Irradiation n_i evolution.png, id=509, 1075.73895pt x 569.12625pt>
+<Images/Irradiation n_i evolution.png, id=415, 1075.73895pt x 569.12625pt>
 File: Images/Irradiation n_i evolution.png Graphic file (type png)
 <use Images/Irradiation n_i evolution.png>
 Package pdftex.def Info: Images/Irradiation n_i evolution.png  used on input line 10.
 (pdftex.def)             Requested size: 455.24411pt x 240.84637pt.
-<Images/Irradiation Recombination.png, id=511, 1076.5821pt x 569.2467pt>
+<Images/Irradiation Recombination.png, id=417, 1076.5821pt x 569.2467pt>
 File: Images/Irradiation Recombination.png Graphic file (type png)
 <use Images/Irradiation Recombination.png>
 Package pdftex.def Info: Images/Irradiation Recombination.png  used on input line 21.
 (pdftex.def)             Requested size: 455.24411pt x 240.71495pt.
 
 
-[26
+[24
 
 
 
 
 ]
 
-[27 <./Images/Irradiation n_i evolution.png> <./Images/Irradiation Recombination.png>]
-<Images/Irradiation Charge neutrality.png, id=527, 914.2155pt x 446.74905pt>
+[25 <./Images/Irradiation n_i evolution.png> <./Images/Irradiation Recombination.png>]
+<Images/Irradiation Charge neutrality.png, id=434, 901.4478pt x 446.74905pt>
 File: Images/Irradiation Charge neutrality.png Graphic file (type png)
 <use Images/Irradiation Charge neutrality.png>
 Package pdftex.def Info: Images/Irradiation Charge neutrality.png  used on input line 37.
-(pdftex.def)             Requested size: 455.24411pt x 222.46733pt.
+(pdftex.def)             Requested size: 455.24411pt x 225.61671pt.
 
 
-[28 <./Images/Irradiation Charge neutrality.png>]
-<Images/Relaxation n_i evolution.png, id=536, 1075.73895pt x 569.12625pt>
+[26 <./Images/Irradiation Charge neutrality.png>]
+<Images/Relaxation n_i evolution.png, id=444, 1075.73895pt x 569.12625pt>
 File: Images/Relaxation n_i evolution.png Graphic file (type png)
 <use Images/Relaxation n_i evolution.png>
-Package pdftex.def Info: Images/Relaxation n_i evolution.png  used on input line 55.
+Package pdftex.def Info: Images/Relaxation n_i evolution.png  used on input line 54.
 (pdftex.def)             Requested size: 455.24411pt x 240.84637pt.
-<Images/Relaxation Recombination.png, id=537, 1076.5821pt x 569.2467pt>
+<Images/Relaxation Recombination.png, id=445, 1076.5821pt x 569.2467pt>
 File: Images/Relaxation Recombination.png Graphic file (type png)
 <use Images/Relaxation Recombination.png>
-Package pdftex.def Info: Images/Relaxation Recombination.png  used on input line 64.
+Package pdftex.def Info: Images/Relaxation Recombination.png  used on input line 63.
 (pdftex.def)             Requested size: 455.24411pt x 240.71495pt.
 
 
-[29 <./Images/Relaxation n_i evolution.png>]
-<Images/Relaxation Charge neutrality.png, id=546, 895.06395pt x 446.74905pt>
+[27 <./Images/Relaxation n_i evolution.png>]
+<Images/Relaxation Charge neutrality.png, id=454, 901.4478pt x 446.74905pt>
 File: Images/Relaxation Charge neutrality.png Graphic file (type png)
 <use Images/Relaxation Charge neutrality.png>
-Package pdftex.def Info: Images/Relaxation Charge neutrality.png  used on input line 83.
-(pdftex.def)             Requested size: 455.24411pt x 227.22548pt.
-
-
-[30 <./Images/Relaxation Recombination.png>]
-<Images/GC_ActivationAndPeakTemperatures.png, id=556, 1075.6185pt x 569.12625pt>
+Package pdftex.def Info: Images/Relaxation Charge neutrality.png  used on input line 82.
+(pdftex.def)             Requested size: 455.24411pt x 225.61671pt.
+<Images/GC_ActivationAndPeakTemperatures.png, id=457, 1075.6185pt x 569.12625pt>
 File: Images/GC_ActivationAndPeakTemperatures.png Graphic file (type png)
 <use Images/GC_ActivationAndPeakTemperatures.png>
-Package pdftex.def Info: Images/GC_ActivationAndPeakTemperatures.png  used on input line 96.
+Package pdftex.def Info: Images/GC_ActivationAndPeakTemperatures.png  used on input line 95.
 (pdftex.def)             Requested size: 455.24411pt x 240.88112pt.
 
 
-[31 <./Images/Relaxation Charge neutrality.png>]
-<Images/GC_GlowCurve.png, id=566, 1076.5821pt x 569.2467pt>
+[28 <./Images/Relaxation Recombination.png>]
+
+[29 <./Images/Relaxation Charge neutrality.png>]
+<Images/GC_GlowCurve.png, id=472, 1076.5821pt x 569.2467pt>
 File: Images/GC_GlowCurve.png Graphic file (type png)
 <use Images/GC_GlowCurve.png>
-Package pdftex.def Info: Images/GC_GlowCurve.png  used on input line 116.
+Package pdftex.def Info: Images/GC_GlowCurve.png  used on input line 115.
 (pdftex.def)             Requested size: 455.24411pt x 240.71495pt.
 
 
-[32 <./Images/GC_ActivationAndPeakTemperatures.png>]
+[30 <./Images/GC_ActivationAndPeakTemperatures.png>]
 
-[33 <./Images/GC_GlowCurve.png>]
-<Images/Heating Charge neutrality.png, id=580, 891.8118pt x 446.74905pt>
+[31 <./Images/GC_GlowCurve.png>]
+<Images/Heating Charge neutrality.png, id=487, 901.4478pt x 446.74905pt>
 File: Images/Heating Charge neutrality.png Graphic file (type png)
 <use Images/Heating Charge neutrality.png>
-Package pdftex.def Info: Images/Heating Charge neutrality.png  used on input line 133.
-(pdftex.def)             Requested size: 455.24411pt x 228.05713pt.
+Package pdftex.def Info: Images/Heating Charge neutrality.png  used on input line 132.
+(pdftex.def)             Requested size: 455.24411pt x 225.61671pt.
 )
 
-[34 <./Images/Heating Charge neutrality.png>]
+[32 <./Images/Heating Charge neutrality.png>]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 
+[33
+
+
+
+
+]
+
+[34])
+
 [35
 
-
-
-
 ]
 
-[36])
-
-[37
-
-]
-
-[38]
+[36]
 \openout2 = `bibliografia.aux'.
 
  (./bibliografia.tex
-Underfull \hbox (badness 1077) in paragraph at lines 21--22
-[]\T1/cmr/m/n/12 J. F. Be-navente, J. M. Gómez-Ros, and A. M. Romero, ``Nu-mer-i-cal anal-
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 21--22
-\T1/cmr/m/n/12 y-sis of the ir-ra-di-a-tion and heat-ing pro-cesses of ther-mo-lu-mi-nes-cent ma-te-ri-
+Underfull \hbox (badness 1789) in paragraph at lines 28--29
+[]\T1/cmr/m/n/12 Horowitz, Y. S., Os-ter, L., & Datz, H. (2007). The ther-mo-lu-mi-nes-cence
  []
 
 )
 
-[39
+[37
 
 
 
@@ -1050,21 +1045,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `plantilla_TFG_CienciasUCO_2022_utf8.out' has not changed.
-(rerunfilecheck)             Checksum: E497D0D6C30F4F178FE0FB8A49BA205E;2729.
+(rerunfilecheck)             Checksum: DD88FF841E1DDD79E3629AA65D60DF99;2706.
  ) 
 Here is how much of TeX's memory you used:
- 28252 strings out of 473190
- 511147 string characters out of 5715800
- 1146007 words of memory out of 5000000
- 50820 multiletter control sequences out of 15000+600000
+ 28246 strings out of 473190
+ 511067 string characters out of 5715800
+ 1125449 words of memory out of 5000000
+ 50817 multiletter control sequences out of 15000+600000
  581471 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,12n,110p,1464b,1347s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb>
-Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (40 pages, 6142100 bytes).
+Output written on plantilla_TFG_CienciasUCO_2022_utf8.pdf (38 pages, 6057145 bytes).
 PDF statistics:
- 811 PDF objects out of 1000 (max. 8388607)
- 661 compressed objects within 7 object streams
- 136 named destinations out of 1000 (max. 500000)
+ 718 PDF objects out of 1000 (max. 8388607)
+ 571 compressed objects within 6 object streams
+ 133 named destinations out of 1000 (max. 500000)
  251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

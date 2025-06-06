@@ -1,8 +1,8 @@
 \chapter{Simulations} \label{ch:4}
 
-\section{Materials used for simulations} \label{sec:materials}
+\section{Tools and software used for simulations} \label{sec:materials}
 
-The materials used for this work are all the digital tools required for the simulation of the behavior of our material of choice. In our case, the project was made using \textit{Python} in a Jupyter Notebook. The programs written are available on the GitHub repository called \texttt{TFG\_MartadelaRosa}. 
+The materials used for this work are all the digital tools required for the simulation of the behavior of our material of choice. In our case, the project was made using \textit{Python} in a Jupyter Notebook. The programs written are available on the GitHub repository called \href{https://github.com/MartadelaRosa/TFG_MartadelaRosa}{\texttt{TFG\_MartadelaRosa}}. 
 
 \vspace{10pt}
 
@@ -27,7 +27,7 @@ The first step to perform the simulations is to define the parameters of the mod
 
 \renewcommand{\arraystretch}{1.5}
 \begin{longtable}[c]{llcccc}
-\caption{Kinetic and structural parameters used in the simulations. Each trap and recombination center is characterized by its activation energy ($E_i$), frequency factor ($s_i$), electron trapping probability factor ($A_i$), and total density of electrons ($N_i$). The values are based on experimental data for LiF:Mg,Ti.}
+\caption[Kinetic and structural parameters used in the simulations.]{Kinetic and structural parameters used in the simulations. Each trap and recombination center is characterized by its activation energy ($E_i$), frequency factor ($s_i$), electron trapping probability factor ($A_i$), and total density of electrons ($N_i$). The values are based on experimental data for LiF:Mg,Ti.}
 \label{tab:simulationparameters}\\
 \hline
 \multicolumn{2}{l}{Parameters} & \multicolumn{1}{c}{E (eV)} & \multicolumn{1}{c}{s (s$^{-1}$)} & \multicolumn{1}{c}{A (cm$^3$ s$^{-1}$)} & \multicolumn{1}{c}{N (cm$^3$)} \\ \hline
@@ -48,7 +48,7 @@ The first step to perform the simulations is to define the parameters of the mod
                                        & Non Radiative & 2.30   & 1.00 $\cdot 10^{16}$ &  $10^{-8}$ &  $10^{10}$ \\ \hline
 \end{longtable}
 
-To ensure modularity and consistency, the simulation is structured in reusable components. Each phase is simulated by calling the same solver function with different input values, and the output is automatically stored and passed between stages to maintain continuity. As two models have been used for the simulations, two separate functions were created to define the system of differential equations for the TL process. The first function, \texttt{diff\_eqs\_freqfactor()}, is used for the simulations of the TL process with a frequency factor that depends on the temperature following equation \ref{eq:freqfactor_lnT}, while the second function, \texttt{diff\_eqs\_notemp()}, is used for the simulations where the frequency factor is a constant from Table \ref{tab:simulationparameters}. The functions take as input the current state of the system, the time, and the parameters of the model, and return the derivatives of the charge concentrations with respect to time. In the Listing \ref{lst:irradiation}, we can see the implementation of the first function for the irradiation phase of the TL process.
+To ensure modularity and consistency, the simulation is structured in reusable components. Each phase is simulated by calling the same solver function with different input values, and the output is automatically stored and passed between stages as initial conditions to the next one to maintain continuity. As two models have been used for the simulations, two separate functions were created to define the system of differential equations for the TL process. The first function, \texttt{diff\_eqs\_freqfactor()}, is used for the simulations of the TL process with a frequency factor that depends on the temperature following equation \ref{eq:freqfactor_lnT}, while the second function, \texttt{diff\_eqs\_notemp()}, is used for the simulations where the frequency factor is a constant from Table \ref{tab:simulationparameters}. The functions take as input the current state of the system, the time, and the parameters of the model, and return the derivatives of the charge concentrations with respect to time. In the Listing \ref{lst:irradiation}, we can see the implementation of the first function for the irradiation phase of the TL process.
 
 \vspace{10pt}
 

@@ -6,7 +6,7 @@
 \fancyfoot[R]{\small page \thepage} 
 }
 \tableofcontents
-\addcontentsline{toc}{chapter}{General index}
+\addcontentsline{toc}{chapter}{Contents}
 
 \renewcommand{\baselinestretch}{1.5}
 
@@ -14,19 +14,22 @@
 \fancypagestyle{plain}{
 \fancyfoot[R]{\small page \thepage} 
 }
-\renewcommand{\listfigurename}{Index of \nomfigs}
+\renewcommand{\listfigurename}{\nomfigs index}
 \renewcommand{\figurename}{\nomfig}
+\newcommand{\nomfig}{Figure}                         
+\newcommand{\nomfigs}{Figure } 
 
 \listoffigures
-\addcontentsline{toc}{chapter}{Index of \nomfigs}
+\addcontentsline{toc}{chapter}{\nomfigs index}
 
 
 % Genera el índice de tablas---------------
 \fancypagestyle{plain}{
 \fancyfoot[R]{\small page \thepage}
 }
+\renewcommand{\listtablename}{Table index}
 \listoftables
-\addcontentsline{toc}{chapter}{Index of tables}
+\addcontentsline{toc}{chapter}{Table index}
 
 
 % Para las cabeceras del resto

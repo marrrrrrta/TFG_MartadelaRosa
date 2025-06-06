@@ -207,26 +207,28 @@ y02 = [n_I_02, n_II_02, n_III_02, n_IV_02, n_V_02, n_s_02, m_NR_02, m_R_02, n_c_
 value.E_I, value.E_II, value.E_III, value.E_IV, value.E_V, value.E_s = E_I, E_II, E_III, E_IV, E_V, E_s
 heating1 = odeint(FunctionUsed, y01, t, args=(value,))
 n_I1, n_II1, n_III1 ,n_IV1 ,n_V1 ,n_s1 ,m_R1 ,m_NR1 ,n_c1 , n_v1 = heating1.T
-'''dm_R = m_R1 * value.A_mn_R * n_c1
+dm_R = m_R1 * value.A_mn_R * n_c1
 dm_NR = m_NR1 * value.A_mn_NR * n_c1
-heating1 = np.column_stack((heating1, dm_R, dm_NR))'''
+
 
 value.E_I, value.E_II, value.E_III, value.E_IV, value.E_V, value.E_s = 1.19, 1.38, 1.68, 1.78, 2.12, 3.00  # Original values
 heating2 = odeint(diff_eqs_notemp, y02, t, args=(value,))
 n_I2, n_II2, n_III2 ,n_IV2 ,n_V2 ,n_s2 ,m_R2 ,m_NR2 ,n_c2 , n_v2 = heating2.T
-'''dm_R = m_R2 * value.A_mn_R * n_c2
+dm_R = m_R2 * value.A_mn_R * n_c2
 dm_NR = m_NR2 * value.A_mn_NR * n_c2
-heating2 = np.column_stack((heating2, dm_R, dm_NR))'''
+
 
 #plot_column1(heating1, heating2, 'LaTeX/Images/Heating ', t, 'upper left', 'Temperature (ºC)', 'Heating phase')
 #plot_column2(heating1, heating2, 'LaTeX/Images/Heating ', t, value, 'upper right', 'Temperature (ºC)', 'Heating phase')
-plot_column3(heating1, heating2, 'LaTeX/Images/Heating ', t, value, 'Temperature (ºC)', 'Heating phase')
+#plot_column3(heating1, heating2, 'LaTeX/Images/Heating ', t, value, 'Temperature (ºC)', 'Heating phase')
 
+heating1 = np.column_stack((heating1, dm_R, dm_NR))
+heating2 = np.column_stack((heating2, dm_R, dm_NR))
 # Saving and exporting to excel
-results1 = pd.DataFrame(heating1, columns=column_names)
+'''results1 = pd.DataFrame(heating1, columns=column_names)
 results2 = pd.DataFrame(heating2, columns=column_names)
 results1.to_excel('Results/Heating_Temperature_Dependent.xlsx', index=False)
-results2.to_excel('Results/Heating_Temperature_Independent.xlsx', index=False)
+results2.to_excel('Results/Heating_Temperature_Independent.xlsx', index=False)'''
 
 
 #-------------------------------------------------------------------------

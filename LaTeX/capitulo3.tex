@@ -14,7 +14,7 @@ Let us first consider the case of an arbitrary semiconductor without impurities.
 \end{equation}
 
 \vspace{10pt}
-The periodicity of the potential $V(\vec{r})$ for any lattice vector $\vec{R}$ allows the Bloch's theorem to apply, and so it gives rise to the formation of a band structure, composed by the conduction band, which is typically fully occupied at absolute zero temperature, and the valence band, which is in turn typically empty -or rather, we can consider it filled with holes ($h^+$), or ``positively charged electrons''. The bandgap $E_g$ is then defined as the energy difference between the top of the valence band and the bottom of the conduction band, and for a perfect crystal, no energy states are allowed in that region. This can be clearly seen if we take into account the density of available states, $D(E)$, which is a function of the Fermi-Dirac distribution $f(E)$ for a certain temperature $T$. This function gives the occupancy of any energy level $E$, and can be expressed as:
+The periodicity of the potential $V(\vec{r})$ for any lattice vector $\vec{R}$ allows the Bloch's theorem to apply, and so it gives rise to the formation of a band structure, composed by the valence band, which is typically fully occupied at absolute zero temperature, and the conduction band, which is in turn typically empty -or rather, we can consider it filled with holes ($h^+$), or ``positively charged electrons''. The bandgap $E_g$ is then defined as the energy difference between the top of the valence band and the bottom of the conduction band, and for a perfect crystal, no energy states are allowed in that region. This can be clearly seen if we take into account the density of available states, $D(E)$, which is a function of the Fermi-Dirac distribution $f(E)$ for a certain temperature $T$. This function gives the occupancy of any energy level $E$, and can be expressed as:
 
 \begin{equation} \label{eq:fermidirac}
   f(E) = \frac{1}{e^{\frac{E - E_f}{k_B T}} + 1},
@@ -26,14 +26,14 @@ Where $E_f$ is the Fermi Level, and $k_B$ is the Boltzmann constant. If the syst
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/FD_irradiation.png}
-  \caption{Fermi-Dirac distribution $f(E)$ plotted against energy for different temperatures (0.1 K, 300 K and 600 K) at four key stages of the thermoluminescence process: (a) Before irradiation, where electrons follow a standard Fermi-Dirac distribution centered at the Fermi Level $E_F$; (b) After irradiation, the systems develops separate quasi-Fermi levels for electrons ($E_{Fe}$) and holes ($E_{Fh}$), deforming the previous distribution; (c) During stimulation, where thermal effects shift both quasi-Fermi levels closer to equilibrium, and the distribution approaches the original shape; (d) Final equilibrium, where the system returns to a standard Fermi-Dirac distribution with the Fermi Level $E_F$ restored. }
+  \caption[Fermi-Dirac distributions at different temperatures and TL process stages.]{Fermi-Dirac distribution $f(E)$ plotted against energy for different temperatures (0.1 K, 300 K and 600 K) at four key stages of the thermoluminescence process: (a) Before irradiation, where electrons follow a standard Fermi-Dirac distribution centered at the Fermi Level $E_F$; (b) After irradiation, the systems develops separate quasi-Fermi levels for electrons ($E_{Fe}$) and holes ($E_{Fh}$), deforming the previous distribution; (c) During stimulation, where thermal effects shift both quasi-Fermi levels closer to equilibrium, and the distribution approaches the original shape; (d) Final equilibrium, where the system returns to a standard Fermi-Dirac distribution with the Fermi Level $E_F$ restored. }
   \label{fig:FD_irradiation}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Images/modeldiagram.pdf}
-  \caption{Jab\l oński diagram of the theoretical model for the thermoluminescence process. The energy is situated in the Y axis, and the different components of the system are shown: traps ($p_k$: electron release probability, $A_k$: recombination probability, $N_k$: total density of available positions), recombination centers ($^hp_j$: hole excitation probability, $A_j$: electron trapping probability, $^jA_{mn}$: electron recombination probability), and the conduction (B.C) and valence (B.V) bands with the respective electron-hole pair generation rate ($G$).}
+  \caption[Jab\l oński diagram illustrating the theoretical TL model with traps and transitions.]{Jab\l oński diagram of the theoretical model for the thermoluminescence process. The energy is situated in the Y axis, and the different components of the system are shown: traps ($p_k$: electron release probability, $A_k$: recombination probability, $N_k$: total density of available positions), recombination centers ($^hp_j$: hole excitation probability, $A_j$: electron trapping probability, $^jA_{mn}$: electron recombination probability), and the conduction (C.B) and valence (V.B) bands with the respective electron-hole pair generation rate ($G$).}
   \label{fig:TheoreticalModel}
 \end{figure}
 
@@ -42,7 +42,7 @@ The introduction of impurities or defects however, break the periodicity of the 
 
 \vspace{10pt}
 
-And so, we can see a schematic representation of our theoretical model in Figure \ref{fig:TheoreticalModel}. Situating the energy in the Y axis, the focus is set in the energy gap of our material. Drawn as a blue or green horizontal line are the energy traps; in blue above the Fermi level there are electron traps, and in green there are hole traps or recombination centers. The vertical arrows describe available transitions; the ones pointing upwards represent an excitation process, and the ones pointing downwards represent a relaxation process. 
+And so, we can see a schematic representation of our theoretical model in Figure \ref{fig:TheoreticalModel}. Situating the energy in the Y axis, the focus is set in the energy gap of our material. Drawn as a blue or green horizontal line are the energy traps; in blue above the Fermi level there are electron traps, and in green there are ``hole traps'' or recombination centers. The vertical arrows describe available transitions; the ones pointing upwards represent an excitation process, and the ones pointing downwards represent a relaxation process. 
 
 \vspace{10pt}
 
@@ -50,7 +50,7 @@ Mathematically, we can describe these processes with a set of differential equat
 \vspace{10pt}
 
 \begin{equation} \label{eq:dn_cdt}
-  \frac{dn_c}{dt} = \textcolor{orange}{G} - \textcolor{customblue}{\left[\sum_i \frac{dn_i}{dt}\right]} \cdot n_c - \textcolor{customgreen}{\left[ \sum_{j=R, N\!R}\, ^iA_{mn} \cdot m_j \right]} \cdot n_c
+  \frac{dn_c}{dt} = \textcolor{orange}{G} - \textcolor{customblue}{\left[\sum_i \frac{dn_i}{dt}\right]} \cdot n_c - \textcolor{customgreen}{\left[ \sum_{j=R, N\!R}\, ^jA_{mn} \cdot m_j \right]} \cdot n_c
 \end{equation}
 
 \begin{equation} \label{eq:dn_idt}
@@ -73,12 +73,12 @@ Where every term is defined as follows:
   \item $n_v$: electron concentration in the valence band [cm$^{-3}$]
   \item $n_i$: electron concentration in trap i [cm$^{-3}$]
   \item $m_j$: hole concentration in the recombination center j [cm$^{-3}$]
-  \item $N_i$: total density of available positions in electron trapping centres in trap i [cm$^{-3}$]
-  \item $M_j$: total density of available positions in recombination centers [cm$^{-3}$]
+  \item $N_i$: total density of available positions in trap i [cm$^{-3}$]
+  \item $M_j$: total density of available positions in recombination center j [cm$^{-3}$]
   \item $p_i$: electron release probability factor for trap i [s$^{-1}$]
   \item $^hp_j$: hole release probability factor for recombination center j [s$^{-1}$]
   \item $A_i$: electron trapping probability factor for trap i [cm$^{3}$ s$^{-1}$]
-  \item $^iA_{mn}$: recombination probability factor for recombination center j [cm$^{3}$ s$^{-1}$]
+  \item $^jA_{mn}$: recombination probability factor for recombination center j [cm$^{3}$ s$^{-1}$]
 \end{itemize}
 
 \vspace{10pt}
@@ -124,7 +124,7 @@ As introduced in Section \ref{sec:modelo}, there is a greater discussion to be h
   p = p_{th} + p_{ph}
 \end{equation}
 
-Where $p_{th}$ is the thermal excitation probability and $p_{ph}$ is the optical excitation probability. The thermal contribution follows Arrhenius equation. The probability per second that the electron will be thermally excited into the conduction band is given by:
+Where $p_{th}$ is the thermal excitation probability and $p_{ph}$ is the optical excitation probability. The thermal contribution follows Arrhenius equation. The probability per unit of time that the electron will be thermally excited into the conduction band is given by:
 
 \begin{equation} \label{eq:p_th}
   p_{th} = s \cdot e^{-\frac{E_t}{k_B T}}
@@ -151,11 +151,11 @@ Where $E_{ph}$ is given by:
 
 \vspace{7pt}
 
-And here $S$ is the Huang-Rhys factor, which is a dimensionless parameter that characterizes the degree of electron-phonon coupling in a luminescent material that usually ranges on the order of 1--2 \cite{mckeever_1995}. The higher the Huang-Rhys factor, the stronger the electron-phonon coupling, and so the greater the energy shift of the trap level due to lattice vibrations. The term $h \cdot \nu_{ph}$ is the energy of a phonon with frequency $\nu_{ph}$ [s$^{-1}$], where $h$ is Planck's constant [eV $\cdot$ s]. For LiF the phonon frequency is typically around 900 cm$^{-1}$ \cite{bransden_atomics}, which corresponds to a phonon energy of approximately 0.11 eV. If we take a Huang-Rhys factor of $S_{HR} = 1$, we can estimate the energy shift given a set of experimental values for the thermal energies $E_t$ of the traps. The results are shown in \ref{tab:energythresholds} and with them we see that the energy threshold $E_0$ is primarily determined by the thermal trap depth $E_t$, with the phonon energy $E_{ph}$ contributing a small correction.
+And here $S$ is the Huang-Rhys factor, which is a dimensionless parameter that characterizes the degree of electron-phonon coupling in a luminescent material that usually ranges on the order of 1--2 \cite{mckeever_1995}. The higher the Huang-Rhys factor, the stronger the electron-phonon coupling, and so the greater the energy shift of the trap level due to lattice vibrations. The term $h \cdot \nu_{ph}$ is the phonon energy with frequency $\nu_{ph}$ [s$^{-1}$], where $h$ is Planck's constant [eV $\cdot$ s]. For LiF the phonon frequency is typically around 900 cm$^{-1}$ \cite{bransden_atomics}, which corresponds to a phonon energy of approximately 0.11 eV. If we take a Huang-Rhys factor of $S_{HR} = 1$, we can estimate the energy shift given a set of experimental values for the thermal energies $E_t$ of the traps. The results are shown in \ref{tab:energythresholds} and with them we see that the energy threshold $E_0$ is primarily determined by the thermal trap depth $E_t$, with the phonon energy $E_{ph}$ contributing a small correction.
 
 \renewcommand{\arraystretch}{1.5}
 \begin{longtable}[c]{lllll}
-\caption{Energies for the different traps and recombination centers in LiF:Mg,Ti. $E_t$ represents the thermal energy, $E_{ph}$ the phonon energy, and $E_0$ the total energy threshold.}
+\caption[Energies for the different traps and recombination centers in LiF:Mg,Ti.]{Energies for the different traps and recombination centers in LiF:Mg,Ti. $E_t$ represents the thermal energy, $E_{ph}$ the phonon energy, and $E_0$ the total energy threshold.}
 \label{tab:energythresholds}\\
 \hline
 \multicolumn{2}{l}{Parameters}                            & $E_t$ (eV) & $E_{ph}$ (eV) & $E_0$ (eV) \\ \hline
@@ -175,7 +175,7 @@ And here $S$ is the Huang-Rhys factor, which is a dimensionless parameter that c
 
 \vspace{10pt}
 
-This observation reinforces the suitability of studying the thermoluminescence (TL) independently of optically stimulated luminescence (OSL). The fact that the thermal energy $E_t$ stays over zero confirms that thermal energy alone is sufficient to release charge carriers from traps over a physically accessible temperature range. Furthermore, in TL measurements, no external optical stimulation is applied during readout, and so the photon flux in a darkened environment is negligible. As a result, photo-induced excitation does not contribute meaningfully to the observed luminescence signal. From now on, we will close our focus on the thermoluminescence process, and so we will only consider the thermal excitation probability $p_{th}$ in our simulations.
+This observation reinforces the suitability of studying the TL independently of optically stimulated luminescence (OSL). The fact that the thermal energy $E_t$ stays over zero confirms that thermal energy alone is sufficient to release charge carriers from traps over a physically accessible temperature range. Furthermore, in TL measurements, no external optical stimulation is applied during readout, and so the photon flux in a darkened environment is negligible. As a result, photo-induced excitation does not contribute meaningfully to the observed luminescence signal. From now on, we will close our focus on the thermoluminescence process, and so we will only consider the thermal excitation probability $p_{th}$ in our simulations.
 
 \vspace{10pt}
 
@@ -226,7 +226,7 @@ atoms, forming a crystal lattice structure of a face-centered cubic (FCC) type. 
 
 \vspace{10pt}
 
-To enhance the properties for radiation detection, LiF is often doped with magnesium (Mg) and titanium (Ti) ions, and sold commercially as TLD-100 \cite{lif}. The doping process introduces defects in the crystal lattice, creating energy levels within the bandgap. These defects play a crucial role in trapping and releasing charge carriers, which are responsible for the thermoluminescent response of the material. This process is known as thermoluminescence (TL), where the trapped electrons are released upon heating, resulting in the emission of light. The intensity of this emitted light is proportional to the amount of radiation absorbed by the material, making it a valuable tool for dosimetry.
+To enhance the properties for radiation detection, LiF is often doped with magnesium (Mg) and titanium (Ti) ions, and sold commercially as TLD-100 \cite{horowitz_thermoluminescence_2007}. The doping process introduces defects in the crystal lattice, creating energy levels within the bandgap. These defects play a crucial role in trapping and releasing charge carriers, which are responsible for the thermoluminescent response of the material. This process is known as thermoluminescence, where the trapped electrons are released upon heating, resulting in the emission of light. The intensity of this emitted light is proportional to the amount of radiation absorbed by the material, making it a valuable tool for dosimetry.
 
 \vspace{10pt}
 
@@ -235,7 +235,7 @@ The TL response of LiF:Mg,Ti is characterized by a glow curve, which is a plot o
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{Images/Experimental_Glow_Curve.png}
-    \caption{Experimental thermoluminescence glow curve of LiF:Mg,Ti showing the emitted light intensity [u.a] plotted against temperature (\textdegree C). The most prominent is the main dosimetric peak around 200 \textdegree C, which is stable and reproducible. Lower-temperature peaks (<150 \textdegree C) correspond to shallow traps with poor thermal stability, while intermediate peaks (150–200 \textdegree C) suggest more complex trapping mechanisms. The measurement reflects the material’s characteristic response following exposure to ionizing radiation.}
+    \caption[Experimental TL glow curve of LiF:Mg,Ti.]{Experimental thermoluminescence glow curve of LiF:Mg,Ti showing the emitted light intensity [u.a] plotted against temperature (\textdegree C). The most prominent is the main dosimetric peak around 200 \textdegree C, which is stable and reproducible. Lower-temperature peaks (<150 \textdegree C) correspond to shallow traps with poor thermal stability, while intermediate peaks (150–200 \textdegree C) suggest more complex trapping mechanisms. The measurement reflects the material’s characteristic response following exposure to ionizing radiation.}
     \label{fig:ExperimentalGlowCurve}
 \end{figure}
 \vspace{10pt}

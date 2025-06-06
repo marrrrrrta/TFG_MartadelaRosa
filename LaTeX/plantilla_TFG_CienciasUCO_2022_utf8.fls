@@ -405,8 +405,6 @@ OUTPUT plantilla_TFG_CienciasUCO_2022_utf8.toc
 INPUT ./plantilla_TFG_CienciasUCO_2022_utf8.lof
 INPUT ./plantilla_TFG_CienciasUCO_2022_utf8.lof
 INPUT plantilla_TFG_CienciasUCO_2022_utf8.lof
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 OUTPUT plantilla_TFG_CienciasUCO_2022_utf8.lof
 INPUT ./plantilla_TFG_CienciasUCO_2022_utf8.lot
 INPUT ./plantilla_TFG_CienciasUCO_2022_utf8.lot
@@ -458,6 +456,8 @@ INPUT ./Images/modeldiagram.pdf
 INPUT ./Images/modeldiagram.pdf
 INPUT ./Images/modeldiagram.pdf
 INPUT ./Images/modeldiagram.pdf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT ./Images/Experimental_Glow_Curve.png
