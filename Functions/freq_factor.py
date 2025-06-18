@@ -10,12 +10,12 @@ def freq_factor(deltaS):
     * kB: Boltzmann constant (eV/K)
 
     Args:
-        deltaS (_type_): entropy change
+        deltaS: entropy change
     """
-    kB = 8.6173335e-5          # Boltzmann constant (eV/K)
-    K = 1                # from 'other_plots.ipynb'
+    kB = 8.6173335e-5           # Boltzmann constant (eV/K)
+    K = 1                       # Transition probability constant (dimensionless)
     nu_m = 90000                # from B.H. Bransden book (m-1)
-    nu_s = 2.53e+16      # (s-1)
+    nu_s = 2.53e+16             # (s-1)
     
     freq_factor = nu_s * K * np.exp(deltaS / kB)
     return freq_factor

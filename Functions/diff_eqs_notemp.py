@@ -25,12 +25,16 @@ def diff_eqs_notemp(y0, t, value):
     ### In this case, the frequency factor is the EXPERIMENTAL value, and doesn't change with T
     
     Args:
-        y0 (_type_): initial condictions vector
-        t (_type_): time vector
+        y0: initial condictions vector
+        t: time vector
+        value: parameters object
     """
     
     # Unpacking of variables
     n_I, n_II, n_III, n_IV, n_V, n_s, m_R, m_NR, n_c, n_v = y0
+    
+    # Redefinition of the energy parameters
+    value.E_I, value.E_II, value.E_III, value.E_IV, value.E_V, value.E_s = 1.19, 1.38, 1.68, 1.78, 2.12, 3.00
     
     # Definition of temperature change with the heating rate [K]
     temp_heating = 273.15 + value.T_C + value.hr * t

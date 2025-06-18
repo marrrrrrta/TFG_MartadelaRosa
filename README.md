@@ -1,34 +1,54 @@
-# TFG Marta de la Rosa
-Repository with the files in the Bachelor's Thesis (Trabajo Fin de Grado) of Marta de la Rosa Núñez.
+# Luminescent response study of ionic crystals used in dosimetry
 
-## File description:
+This repository contains code and data for simulating and analyzing thermoluminescence (TL) processes in LiF:Mg,Ti, including mathematical modeling, data visualization, and parameter extraction.
 
-- `simulations.ipynb`:   
-    An experiment with building the necessary functions in a separate folder to optimize the use of more than one model for the frequency factor. Calls the functions in the `Functions` folder, and outputs a `.csv` with the results in the `Results` folder.
+## Quick Start
+1.  **Install dependencies**   
+    Make sure you have Python 3.12+ and the required packages.
 
-- `Functions/diff_eqs_[].ipynb`:   
-    Script with the function to name the differential equations system. The text in brackets `[]` refer to the way the frequency factor depends with temperature.
+2. **Run a simulation**   
+    Edit and execute `simulations.py` to perform irradiation, relaxation, and heating simulations.
+    Results will be saved in the Results folder.
 
-- `TFG_MARTA.ipynb`:  
-    This Jupyter Notebook is the latest version in current development.
+3. **Explore and plot**   
+    Use the provided functions in the Functions folder to analyze the results using the proposed mathematical models. Further analysis can be done in the Jupyter notebook `other_plots.ipynb`.
 
-- `TFG_MARTA_GCOLAB.ipynb`:  
-    This Jupyter Notebook is the latest version in the Google Colab.
+## Project Structure
+This project is organized to allow flexible simulation and analysis of TL processes.
+You can easily switch between different mathematical models by changing the `FunctionUsed` variable in simulations.py. Both Cinetic and Structural parameters can be modified in the `ParametrosCineticos.xlsx` and `ParametrosEstructurales.xlsx` files, respectively.
 
-- `other_plots.ipynb`:  
-    This Jupyter Notebook has some useful plots or calculations for the main code file.
+## Contents
 
-- `LiF_Entropy.ipynb`:  
-    This Jupyter Notebook contains an initial study on the expression of the entropy in the Fermi-Dirac statistic for the case of a semiconductor.
+- ExperimentalData/
+  - `DatEx_TLD_100_Beta_1.xlsx`   
+    Experimental TL data.
+  - `ParametrosCineticos.xlsx`  
+    Kinetic parameters for traps and recombination centers.
+  - `ParametrosEstructurales.xlsx`   
+    Structural parameters for the simulation.
 
-- `LiF_Entropy_Conductor.ipynb`:  
-    This Jupyter Notebook contains an initial study on the expression of the entropy in the Fermi-Dirac statistic for the case of a conductor.
+- Functions/
+  - `diff_eqs_freqfactor.py`   
+    Differential equations for frequency factor-dependent kinetics.
+  - `diff_eqs_growth.py`   
+    Differential equations for growth kinetics.
+  - `diff_eqs_notemp.py`   
+    Differential equations for temperature-independent kinetics.
+  - `freq_factor.py`   
+    Frequency factor calculations.
+  - `plotting.py`   
+    Plotting and visualization utilities.
 
-- `ExperimentalData/ParametrosCineticos.xlsx`:  
-    This Excel file contains the kinetic parameters used in the simulations, including trap activation energy and frequency factor for each trap and recombination center.
+- Results/  
+    Output folder for generated plots and figures.
 
-- `ExperimentalData/ParametrosEstructurales.xlsx`:  
-    This Excel file contains the structural parameters used in the simulations, including the total density of available states and trapping probabilities for each trap and recombination center.
+- Notebooks and Scripts
+  - `other_plots.ipynb`   
+    Jupyter notebook for additional plots and analysis.
+  - `simulations.py`   
+    Main script for running TL simulations (irradiation, relaxation, heating).
+  - `TFG Marta de la Rosa.pdf`   
+    Thesis document containing detailed explanations and results.
 
-- `LaTeX`:  
-    This folder contains the latest thesis redaction process.
+## About
+This project is a comprehensive study of thermoluminescence (TL) processes in ionic crystals, with a focus on LiF:Mg,Ti. The goal is to develop a deeper understanding of the underlying mechanisms and to provide a valuable tool for dosimetry applications.

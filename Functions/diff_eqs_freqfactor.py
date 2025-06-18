@@ -26,8 +26,9 @@ def diff_eqs_freqfactor(y0, t, value):
                 s = nu * K * exp(alpha * log(T) / kB)
     
     Args:
-        y0 (_type_): initial condictions vector
-        t (_type_): time vector
+        y0: initial condictions vector
+        t: time vector
+        value: parameters object
     """
     # Unpacking of variables
     n_I, n_II, n_III, n_IV, n_V, n_s, m_R, m_NR, n_c, n_v = y0
